@@ -21,38 +21,40 @@
     
     _plugin = [[NeftaPlugin_iOS alloc] init];
     
+    __unsafe_unretained typeof(self) weakSelf = self;
+    
     _plugin.OnReady = ^(NSDictionary<NSString *, Placement *> * placements) {
         int i = 0;
         for (NSString* placementId in placements) {
             PlacementUiView *controller = (PlacementUiView *)[[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
-            [controller SetPlacement:_plugin with: placements[placementId] autoLoad: __autoLoadSwitch.isOn];
+            [controller SetPlacement:weakSelf->_plugin with: placements[placementId] autoLoad: weakSelf->__autoLoadSwitch.isOn];
             controller.frame = CGRectMake(0, i * 160, 390, 160);
-            [self->__placementContainer addSubview: controller];
-            self->_controllers[placementId] = controller;
+            [weakSelf->__placementContainer addSubview: controller];
+            weakSelf->_controllers[placementId] = controller;
             i++;
         }
     };
     
     _plugin.OnBid = ^(Placement *placement, BidResponse *bid) {
-        [self->_controllers[placement._id] OnBid: bid];
+        [weakSelf->_controllers[placement._id] OnBid: bid];
     };
     _plugin.OnLoadStart = ^(Placement *placement) {
-        PlacementUiView *view = self->_controllers[placement._id];
+        PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadStart];
     };
     _plugin.OnLoadFail = ^(Placement *placement, NSString *error) {
-        PlacementUiView *view = self->_controllers[placement._id];
+        PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadFail: error];
     };
     _plugin.OnLoad = ^(Placement *placement) {
-        PlacementUiView *view = self->_controllers[placement._id];
+        PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoad];
     };
     _plugin.OnShow = ^(Placement *placement, NSInteger width, NSInteger height) {
-        [self->_controllers[placement._id] OnShow: width height:height];
+        [weakSelf->_controllers[placement._id] OnShow: width height:height];
     };
     _plugin.OnClose = ^(Placement *placement) {
-        PlacementUiView *view = self->_controllers[placement._id];
+        PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnClose];
     };
 
