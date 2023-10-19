@@ -58,7 +58,7 @@
         [view OnClose];
     };
 
-    [_plugin InitWithUiView:self.view appId: nil useMessages: false];
+    [_plugin InitWithUiView:self.view appId: @"5667525748588544" useMessages: false];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationDidEnterBackgroundNotification object:nil];

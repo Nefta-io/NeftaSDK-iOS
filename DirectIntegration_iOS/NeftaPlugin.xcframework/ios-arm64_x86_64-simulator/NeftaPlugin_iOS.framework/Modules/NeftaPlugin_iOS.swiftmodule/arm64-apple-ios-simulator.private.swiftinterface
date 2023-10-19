@@ -216,7 +216,7 @@ import _StringProcessing
   @objc public func SetPublisherUserId(id: Swift.String)
   @objc public func Record(event: Swift.String)
   @objc public func Bid(id: Swift.String)
-  @objc public func BidWithoutAutoLoad(id: Swift.String)
+  @objc public func BidWithAutoLoad(id: Swift.String)
   public func Bid(id: Swift.String, autoLoad: Swift.Bool = true)
   @objc public func Load(id: Swift.String)
   @objc public func Show(id: Swift.String)

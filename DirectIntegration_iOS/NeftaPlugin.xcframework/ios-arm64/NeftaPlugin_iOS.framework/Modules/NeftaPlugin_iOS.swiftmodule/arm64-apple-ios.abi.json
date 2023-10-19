@@ -9357,8 +9357,8 @@
           },
           {
             "kind": "Function",
-            "name": "BidWithoutAutoLoad",
-            "printedName": "BidWithoutAutoLoad(id:)",
+            "name": "BidWithAutoLoad",
+            "printedName": "BidWithAutoLoad(id:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -9373,10 +9373,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@NeftaPlugin_iOS@objc(cs)NeftaPlugin(im)BidWithoutAutoLoadWithId:",
-            "mangledName": "$s15NeftaPlugin_iOS0aB0C18BidWithoutAutoLoad2idySS_tF",
+            "usr": "c:@M@NeftaPlugin_iOS@objc(cs)NeftaPlugin(im)BidWithAutoLoadWithId:",
+            "mangledName": "$s15NeftaPlugin_iOS0aB0C15BidWithAutoLoad2idySS_tF",
             "moduleName": "NeftaPlugin_iOS",
-            "objc_name": "BidWithoutAutoLoadWithId:",
+            "objc_name": "BidWithAutoLoadWithId:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -10351,413 +10351,399 @@
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3413,
-      "length": 27,
-      "value": "\"bidding on \""
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
-      "kind": "StringLiteral",
-      "offset": 3439,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
-      "kind": "StringLiteral",
-      "offset": 3481,
+      "offset": 3429,
       "length": 34,
       "value": "\"https:\/\/rtb.nefta.app\/bidder\/bid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3590,
+      "offset": 3538,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3622,
+      "offset": 3570,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3662,
+      "offset": 3610,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3745,
+      "offset": 3693,
       "length": 13,
       "value": "\"sdk_version\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3851,
+      "offset": 3799,
       "length": 6,
       "value": "\"nuid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 3994,
+      "offset": 3942,
       "length": 6,
       "value": "\"puid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4096,
+      "offset": 4044,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4133,
+      "offset": 4081,
       "length": 4,
       "value": "\"at\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4139,
+      "offset": 4087,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4154,
+      "offset": 4102,
       "length": 5,
       "value": "\"imp\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4180,
+      "offset": 4128,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4217,
+      "offset": 4165,
       "length": 7,
       "value": "\"tagid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4267,
+      "offset": 4215,
       "length": 5,
       "value": "\"app\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4292,
+      "offset": 4240,
       "length": 5,
       "value": "\"ver\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4344,
+      "offset": 4292,
       "length": 8,
       "value": "\"device\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4372,
+      "offset": 4320,
       "length": 12,
       "value": "\"devicetype\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4403,
+      "offset": 4351,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4407,
+      "offset": 4355,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4426,
+      "offset": 4374,
       "length": 6,
       "value": "\"make\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4434,
+      "offset": 4382,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4459,
+      "offset": 4407,
       "length": 7,
       "value": "\"model\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4499,
+      "offset": 4447,
       "length": 4,
       "value": "\"os\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4533,
+      "offset": 4481,
       "length": 5,
       "value": "\"osv\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4575,
+      "offset": 4523,
       "length": 5,
       "value": "\"hwv\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4616,
+      "offset": 4564,
       "length": 3,
       "value": "\"w\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4651,
+      "offset": 4599,
       "length": 3,
       "value": "\"h\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4687,
+      "offset": 4635,
       "length": 5,
       "value": "\"ppi\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4722,
+      "offset": 4670,
       "length": 9,
       "value": "\"pxratio\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4763,
+      "offset": 4711,
       "length": 10,
       "value": "\"language\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4809,
+      "offset": 4757,
       "length": 9,
       "value": "\"didsha1\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4851,
+      "offset": 4799,
       "length": 8,
       "value": "\"didmd5\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4919,
+      "offset": 4867,
       "length": 5,
       "value": "\"ext\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 4944,
+      "offset": 4892,
       "length": 7,
       "value": "\"nefta\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 5332,
+      "offset": 5280,
       "length": 43,
       "value": "\"Error with bid: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 5374,
+      "offset": 5322,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 5613,
+      "offset": 5561,
       "length": 38,
       "value": "\"Error with bid: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 5650,
+      "offset": 5598,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "Array",
-      "offset": 5874,
+      "offset": 5822,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 5953,
+      "offset": 5901,
       "length": 9,
       "value": "\"seatbid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 6149,
+      "offset": 6097,
       "length": 5,
       "value": "\"bid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 6418,
+      "offset": 6366,
       "length": 7,
       "value": "\"impid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 6761,
+      "offset": 6709,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 6977,
+      "offset": 6925,
       "length": 7,
       "value": "\"price\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7135,
+      "offset": 7083,
       "length": 6,
       "value": "\"nurl\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7299,
+      "offset": 7247,
       "length": 5,
       "value": "\"adm\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7457,
+      "offset": 7405,
       "length": 5,
       "value": "\"cid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7618,
+      "offset": 7566,
       "length": 6,
       "value": "\"crid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7787,
+      "offset": 7735,
       "length": 5,
       "value": "\"ext\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7868,
+      "offset": 7816,
       "length": 7,
       "value": "\"nefta\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 7968,
+      "offset": 7916,
       "length": 20,
       "value": "\"tracking_click_url\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 8201,
+      "offset": 8149,
       "length": 20,
       "value": "\"redirect_click_url\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 8772,
+      "offset": 8720,
       "length": 48,
       "value": "\"Error with init response: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 8819,
+      "offset": 8767,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 9032,
+      "offset": 8980,
       "length": 11,
       "value": "\"undefined\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "IntegerLiteral",
-      "offset": 9176,
+      "offset": 9124,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Bidder.swift",
       "kind": "StringLiteral",
-      "offset": 9648,
+      "offset": 9596,
       "length": 8,
       "value": "\"%02hhx\""
     },
@@ -10946,581 +10932,567 @@
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 5217,
+      "offset": 5220,
       "length": 7,
       "value": "\"width\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5238,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 5272,
+      "offset": 5321,
       "length": 8,
       "value": "\"height\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5294,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 5442,
+      "offset": 5536,
       "length": 16,
       "value": "\"rewarded_video\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 5600,
+      "offset": 5694,
       "length": 8,
       "value": "\"banner\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 5885,
+      "offset": 5979,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 5936,
+      "offset": 6030,
       "length": 3,
       "value": "320"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 6010,
+      "offset": 6104,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 6131,
+      "offset": 6225,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 6218,
+      "offset": 6312,
       "length": 3,
       "value": "480"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 6496,
+      "offset": 6590,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 6519,
+      "offset": 6613,
       "length": 60,
       "value": "\"[NeftaPlugin] Placements loaded: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 6578,
+      "offset": 6672,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 6695,
+      "offset": 6789,
       "length": 3,
       "value": "\"r\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 6960,
+      "offset": 7054,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 7034,
+      "offset": 7128,
       "length": 47,
       "value": "\"[NeftaPlugin] Bid \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 7058,
+      "offset": 7152,
       "length": 8,
       "value": "\" autoLoad: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 7080,
+      "offset": 7174,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 7548,
+      "offset": 7642,
       "length": 3,
       "value": "\"b\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 7570,
+      "offset": 7664,
       "length": 3,
       "value": "\"|\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 7978,
+      "offset": 8137,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 8090,
+      "offset": 8249,
       "length": 26,
       "value": "\"[NeftaPlugin] Load \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 8115,
+      "offset": 8274,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8548,
+      "offset": 8707,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8579,
+      "offset": 8738,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8602,
+      "offset": 8761,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8685,
+      "offset": 8844,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8700,
+      "offset": 8859,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8789,
+      "offset": 8948,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 8804,
+      "offset": 8963,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 8875,
+      "offset": 9034,
       "length": 20,
       "value": "\"Error parsing VAST\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 10688,
+      "offset": 10847,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 10691,
+      "offset": 10850,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 10965,
+      "offset": 11124,
       "length": 210,
       "value": "\"<html><head><meta name=\"viewport\" content=\"width=\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11040,
+      "offset": 11199,
       "length": 1,
       "value": "\",height=\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11071,
+      "offset": 11230,
       "length": 1,
       "value": "\"\" \/><\/head><body style=\"margin:0;zoom:\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 11135,
+      "offset": 11294,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11139,
+      "offset": 11298,
       "length": 1,
       "value": "\"%\">\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11160,
+      "offset": 11319,
       "length": 2,
       "value": "\"<\/body><\/html>\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 11244,
+      "offset": 11403,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11637,
+      "offset": 11796,
       "length": 57,
       "value": "\"[NeftaPlugin] Show \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11675,
+      "offset": 11834,
       "length": 1,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 11692,
+      "offset": 11851,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 12119,
+      "offset": 12278,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 12284,
+      "offset": 12443,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 12518,
+      "offset": 12677,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 12885,
+      "offset": 13044,
       "length": 11,
       "value": "\"s%@|%d|%d\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 13324,
+      "offset": 13483,
       "length": 58,
       "value": "\"[NeftaPlugin] Close \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 13363,
+      "offset": 13522,
       "length": 1,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 13380,
+      "offset": 13539,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 13634,
+      "offset": 13793,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 13837,
+      "offset": 13996,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 13881,
+      "offset": 14040,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 14329,
+      "offset": 14488,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 14621,
+      "offset": 14780,
       "length": 3,
       "value": "\"c\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 14908,
+      "offset": 15067,
       "length": 67,
       "value": "\"[NeftaPlugin] OnLoadingStart \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 14956,
+      "offset": 15115,
       "length": 1,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 14973,
+      "offset": 15132,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15057,
+      "offset": 15254,
       "length": 3,
       "value": "\"p\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15314,
+      "offset": 15521,
       "length": 83,
       "value": "\"[NeftaPlugin] OnLoaded fail \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15361,
+      "offset": 15568,
       "length": 1,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15378,
+      "offset": 15585,
       "length": 1,
       "value": "\"): \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15396,
+      "offset": 15603,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15483,
+      "offset": 15732,
       "length": 3,
       "value": "\"e\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15668,
+      "offset": 15931,
       "length": 61,
       "value": "\"[NeftaPlugin] OnLoaded \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15710,
+      "offset": 15973,
       "length": 1,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 15727,
+      "offset": 15990,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 16088,
+      "offset": 16351,
       "length": 3,
       "value": "\"l\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 16290,
+      "offset": 16553,
       "length": 40,
       "value": "\"[NeftaPlugin] OnClick \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 16329,
+      "offset": 16592,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "Dictionary",
-      "offset": 16793,
+      "offset": 17056,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 17033,
+      "offset": 17296,
       "length": 3,
       "value": "\"i\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 17224,
+      "offset": 17487,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 17329,
+      "offset": 17592,
       "length": 3,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 17576,
+      "offset": 17839,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 17582,
+      "offset": 17845,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 17885,
+      "offset": 18148,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "Array",
-      "offset": 17997,
+      "offset": 18260,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 18399,
+      "offset": 18662,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 18459,
+      "offset": 18722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 18510,
+      "offset": 18773,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Publisher.swift",
       "kind": "BooleanLiteral",
-      "offset": 18559,
+      "offset": 18822,
       "length": 5,
       "value": "false"
     },
@@ -11619,34 +11591,34 @@
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "BooleanLiteral",
       "offset": 1470,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1573,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1730,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "BooleanLiteral",
-      "offset": 1791,
+      "offset": 1572,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "BooleanLiteral",
-      "offset": 1874,
+      "offset": 1729,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1790,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1873,
       "length": 5,
       "value": "false"
     },
@@ -11660,133 +11632,133 @@
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2159,
+      "offset": 2158,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2197,
+      "offset": 2196,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2228,
+      "offset": 2227,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2802,
+      "offset": 2801,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "BooleanLiteral",
-      "offset": 2960,
+      "offset": 2959,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3019,
+      "offset": 3018,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3048,
+      "offset": 3047,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3506,
+      "offset": 3505,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3521,
+      "offset": 3520,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 3544,
+      "offset": 3543,
       "length": 45,
       "value": "\"[NeftaPlugin] Prealod rewarded-video \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 3588,
+      "offset": 3587,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 3686,
+      "offset": 3685,
       "length": 7,
       "value": "\"%d.%@\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 4021,
+      "offset": 4020,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 4126,
+      "offset": 4125,
       "length": 70,
       "value": "\"[NeftaPlugin] Rewarded video already exists; [\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 4194,
+      "offset": 4193,
       "length": 1,
       "value": "\"]\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "IntegerLiteral",
-      "offset": 4707,
+      "offset": 4706,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 5583,
+      "offset": 5582,
       "length": 66,
       "value": "\"[NeftaPlugin] Delete expired video with hash: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 5648,
+      "offset": 5647,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/Placement.swift",
       "kind": "StringLiteral",
-      "offset": 2463,
+      "offset": 2462,
       "length": 14,
       "value": "\"NeftaPlugin_iOS.VideoPlacement\""
     },
@@ -13216,7 +13188,7 @@
       "kind": "StringLiteral",
       "offset": 1137,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"3.0.1\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
@@ -13691,461 +13663,475 @@
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
       "offset": 7415,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7517,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 7584,
+      "offset": 7515,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7581,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8136,
+      "offset": 8133,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 8279,
+      "offset": 8276,
       "length": 84,
       "value": "\"[NeftaPlugin] OnResume \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 8323,
+      "offset": 8320,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 8345,
+      "offset": 8342,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 8362,
+      "offset": 8359,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8392,
+      "offset": 8389,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8397,
+      "offset": 8394,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8402,
+      "offset": 8399,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8464,
+      "offset": 8461,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8530,
+      "offset": 8527,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8635,
+      "offset": 8632,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8718,
+      "offset": 8715,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 8793,
+      "offset": 8790,
       "length": 9,
       "value": "\"session\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 8983,
+      "offset": 8980,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 9129,
+      "offset": 9126,
       "length": 23,
       "value": "\"[NeftaPlugin] OnPause\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 9231,
+      "offset": 9228,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 9552,
+      "offset": 9549,
       "length": 10,
       "value": "\"demoUser\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 9676,
+      "offset": 9673,
       "length": 255,
       "value": "\"{\"ad_units\":[{\"id\":\"demoBanner\",\"type\":\"banner\",\"width\":320,\"height\":50},{\"id\":\"demoInterstitial\",\"type\":\"interstitial\",\"width\":320,\"height\":480},{\"id\":\"demoVideo\",\"type\":\"rewarded_video\",\"width\":320,\"height\":480}]}\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10022,
-      "length": 39,
-      "value": "\"https:\/\/api.Nefta.io\/v2.0\/ad\/sdk\/init\""
+      "offset": 10019,
+      "length": 32,
+      "value": "\"https:\/\/rtb.nefta.app\/sdk\/init\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10136,
+      "offset": 10126,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10168,
+      "offset": 10158,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10208,
+      "offset": 10198,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10272,
+      "offset": 10262,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 10361,
+      "offset": 10351,
       "length": 6,
       "value": "\"nuid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 10594,
+      "offset": 10584,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 10733,
+      "offset": 10723,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 10780,
+      "offset": 10770,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 10824,
+      "offset": 10814,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 11037,
+      "offset": 11027,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 11094,
+      "offset": 11084,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11131,
-      "length": 92,
+      "offset": 11121,
+      "length": 99,
       "value": "\"[NeftaPlugin] InitConfiguration \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11189,
+      "offset": 11160,
       "length": 5,
       "value": "\" error: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11222,
+      "offset": 11193,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 11219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11292,
-      "length": 41,
-      "value": "\"[NeftaPlugin] InitConfiguration success\""
+      "offset": 11289,
+      "length": 48,
+      "value": "\"[NeftaPlugin] InitConfiguration \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11487,
+      "offset": 11328,
+      "length": 7,
+      "value": "\" success\""
+    },
+    {
+      "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 11491,
       "length": 61,
       "value": "\"[NeftaPlugin] InitConfiguration error: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11547,
+      "offset": 11551,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "Array",
-      "offset": 11721,
+      "offset": 11725,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 11783,
+      "offset": 11787,
       "length": 6,
       "value": "\"nuid\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 12209,
+      "offset": 12213,
       "length": 36,
       "value": "\"Error with init response: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 12244,
+      "offset": 12248,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 12997,
+      "offset": 13001,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 13072,
+      "offset": 13076,
       "length": 71,
       "value": "\"[NeftaPlugin] Data saved to plist: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 13142,
+      "offset": 13146,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 13181,
+      "offset": 13185,
       "length": 52,
       "value": "\"[NeftaPlugin] Error saving data to plist: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 13232,
+      "offset": 13236,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13533,
+      "offset": 13537,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13602,
+      "offset": 13606,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13772,
+      "offset": 13776,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13775,
+      "offset": 13779,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13778,
+      "offset": 13782,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 13781,
+      "offset": 13785,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 13936,
+      "offset": 13940,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 14138,
+      "offset": 14142,
       "length": 65,
       "value": "\"[NeftaPlugin] Error with get request: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 14202,
+      "offset": 14206,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 14272,
+      "offset": 14276,
       "length": 46,
       "value": "\"[NeftaPlugin] GET request successful: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "StringLiteral",
-      "offset": 14317,
+      "offset": 14321,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 14479,
+      "offset": 14483,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 14524,
+      "offset": 14528,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 14557,
+      "offset": 14561,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 14580,
+      "offset": 14584,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 14628,
+      "offset": 14632,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 14653,
+      "offset": 14657,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-native-sdk-testbed\/PluginSource\/Apple\/NeftaPlugin\/NeftaPlugin.swift",
       "kind": "BooleanLiteral",
-      "offset": 14733,
+      "offset": 14737,
       "length": 4,
       "value": "true"
     },

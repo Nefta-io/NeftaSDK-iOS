@@ -405,7 +405,7 @@ SWIFT_CLASS("_TtC15NeftaPlugin_iOS11NeftaPlugin")
 - (void)SetPublisherUserIdWithId:(NSString * _Nonnull)id;
 - (void)RecordWithEvent:(NSString * _Nonnull)event;
 - (void)BidWithId:(NSString * _Nonnull)id;
-- (void)BidWithoutAutoLoadWithId:(NSString * _Nonnull)id;
+- (void)BidWithAutoLoadWithId:(NSString * _Nonnull)id;
 - (void)LoadWithId:(NSString * _Nonnull)id;
 - (void)ShowWithId:(NSString * _Nonnull)id;
 - (void)CloseWithId:(NSString * _Nonnull)id;
@@ -907,7 +907,7 @@ SWIFT_CLASS("_TtC15NeftaPlugin_iOS11NeftaPlugin")
 - (void)SetPublisherUserIdWithId:(NSString * _Nonnull)id;
 - (void)RecordWithEvent:(NSString * _Nonnull)event;
 - (void)BidWithId:(NSString * _Nonnull)id;
-- (void)BidWithoutAutoLoadWithId:(NSString * _Nonnull)id;
+- (void)BidWithAutoLoadWithId:(NSString * _Nonnull)id;
 - (void)LoadWithId:(NSString * _Nonnull)id;
 - (void)ShowWithId:(NSString * _Nonnull)id;
 - (void)CloseWithId:(NSString * _Nonnull)id;

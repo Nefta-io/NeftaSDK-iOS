@@ -39,10 +39,11 @@
 
 - (IBAction)OnBidClick:(id)sender {
     if (_isAutoLoad) {
-        [_plugin BidWithId: _placement._id];
+        [_plugin BidWithAutoLoadWithId: _placement._id];
     } else {
-        [_plugin BidWithoutAutoLoadWithId: _placement._id];
+        [_plugin BidWithId: _placement._id];
     }
+    [self SyncUi];
 }
 
 - (IBAction)OnLoadClick:(id)sender {
@@ -83,16 +84,29 @@
 
 - (void)SyncUi {
     NSString *bid;
+    NSLog(@"Syncui isbidding:%d canLoad:%d isloading:%d",_placement._isBidding, _placement.CanLoad, _placement._isLoading);
     if (_placement._availableBid == nil) {
         bid = @"Available bid:";
     } else {
         bid = [NSString stringWithFormat: @"Available bid: %@ (%f)", _placement._availableBid._id, _placement._availableBid._price];
     }
     [_availableBidLabel setText:bid];
-    [_bidButton setEnabled: !_placement._isBidding];
-    [_loadButton setTitle: _placement._isLoading ? @"Loading" : @"Load" forState: UIControlStateNormal];
-    [_loadButton setEnabled: [_placement CanLoad ] ];
-    
+ 
+    if (_placement._isBidding) {
+        [_bidButton setEnabled: false];
+        [_bidButton setTitle: @"Bidding" forState: UIControlStateDisabled];
+    } else {
+        [_bidButton setEnabled: true];
+        [_bidButton setTitle: @"Bid" forState: UIControlStateNormal];
+    }
+  
+    if (_placement.CanLoad) {
+        [_loadButton setEnabled: true ];
+        [_loadButton setTitle: @"Load" forState: UIControlStateNormal];
+    } else {
+        [_loadButton setEnabled: false ];
+        [_loadButton setTitle: _placement._isLoading ? @"Loading" : @"Load" forState: UIControlStateDisabled];
+    }
     
     if (_placement._bufferBid == nil) {
         bid = @"Buffered bid:";
