@@ -14,8 +14,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)viewDidAppear:(BOOL)animated {
 
     _controllers = [[NSMutableDictionary alloc] init];
     
@@ -27,55 +26,48 @@
         int i = 0;
         for (NSString* placementId in placements) {
             PlacementUiView *controller = (PlacementUiView *)[[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
-            [controller SetPlacement:weakSelf->_plugin with: placements[placementId] autoLoad: weakSelf->__autoLoadSwitch.isOn];
+            [controller SetPlacement:weakSelf->_plugin with: placements[placementId]];
             controller.frame = CGRectMake(0, i * 160, 390, 160);
-            [weakSelf->__placementContainer addSubview: controller];
+            [weakSelf->_placementContainer addSubview: controller];
             weakSelf->_controllers[placementId] = controller;
             i++;
         }
     };
     
-    _plugin.OnBid = ^(Placement *placement, BidResponse *bid) {
+    _plugin.OnBid = ^(Types type, Placement *placement, BidResponse *bid) {
         [weakSelf->_controllers[placement._id] OnBid: bid];
     };
-    _plugin.OnLoadStart = ^(Placement *placement) {
+    _plugin.OnLoadStart = ^(Types type, Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadStart];
     };
-    _plugin.OnLoadFail = ^(Placement *placement, NSString *error) {
+    _plugin.OnLoadFail = ^(Types type, Placement *placement, NSString *error) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadFail: error];
     };
-    _plugin.OnLoad = ^(Placement *placement) {
+    _plugin.OnLoad = ^(Types type, Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoad];
     };
-    _plugin.OnShow = ^(Placement *placement, NSInteger width, NSInteger height) {
+    _plugin.OnShow = ^(Types type, Placement *placement, NSInteger width, NSInteger height) {
         [weakSelf->_controllers[placement._id] OnShow: width height:height];
     };
-    _plugin.OnClose = ^(Placement *placement) {
+    _plugin.OnClose = ^(Types type, Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnClose];
     };
 
-    [_plugin InitWithUiView:self.view appId: @"5667525748588544" useMessages: false];
+    NSString *appId = @"5070114386870272";
+    [_plugin InitWithAppId: appId useMessages: false];
+    [_plugin PrepareRendererWithUiView: self.view];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume) name:UIApplicationDidBecomeActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationDidEnterBackgroundNotification object:nil];
-}
-
-- (IBAction)_onAutoLoadChange:(id)sender {
-    for (NSString* key in _controllers) {
-        [_controllers[key] SetAutoLoad: __autoLoadSwitch.isOn];
+    NSString *appIdLabel;
+    if (appId == nil || [appId length] == 0) {
+        appIdLabel = @"Demo mode (appId not set)";
+    } else {
+        appIdLabel = [NSString stringWithFormat: @"AppId: %@", appId];
     }
-}
-
-- (void)onResume {
-    [_plugin OnResume];
-}
-
-- (void)onPause {
-    [_plugin OnPause];
+    [_appIdLabel setText: appIdLabel];
 }
 
 @end

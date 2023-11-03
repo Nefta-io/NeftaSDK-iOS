@@ -1,0 +1,16 @@
+PODS:
+  - IronSourceSDK (7.5.0.0)
+
+DEPENDENCIES:
+  - IronSourceSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IronSourceSDK
+
+SPEC CHECKSUMS:
+  IronSourceSDK: e1fdf5a47699558742d0baaa70ca6f508e0fa786
+
+PODFILE CHECKSUM: e2b6f8c5291310a91de8511f5dd802de8298523b
+
+COCOAPODS: 1.13.0

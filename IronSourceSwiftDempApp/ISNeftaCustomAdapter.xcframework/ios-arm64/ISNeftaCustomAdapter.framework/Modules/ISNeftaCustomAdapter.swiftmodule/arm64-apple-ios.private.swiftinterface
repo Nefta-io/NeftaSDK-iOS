@@ -1,0 +1,326 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ISNeftaCustomAdapter
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVKit
+import CommonCrypto
+import CoreTelephony
+import Foundation
+@_exported import ISNeftaCustomAdapter
+import IronSource
+import StoreKit
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers @objc public class WebController : ObjectiveC.NSObject, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+  public typealias OnLoadBlock = ((ISNeftaCustomAdapter.Placement, Swift.String?) -> Swift.Void)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ISNeftaCustomInterstitial) public class ISNeftaCustomInterstitial : IronSource.ISBaseInterstitial {
+  @objc override dynamic public func loadAd(with adData: IronSource.ISAdData, delegate: any IronSource.ISInterstitialAdDelegate)
+  @objc override dynamic public func showAd(with viewController: UIKit.UIViewController, adData: IronSource.ISAdData, delegate: any IronSource.ISInterstitialAdDelegate)
+  @objc override dynamic public func isAdAvailable(with adData: IronSource.ISAdData) -> Swift.Bool
+  @objc override dynamic public init(_ providerConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init(adUnit: IronSource.ISAdUnit, adapterConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class NeftaEvents : ObjectiveC.NSObject {
+  @objc public enum ProgressionStatus : Swift.Int {
+    case Start
+    case Completed
+    case Fail
+    public var _value: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ProgressionType : Swift.Int {
+    case Undefined
+    case GameplayUnit
+    case Task
+    case Achievement
+    case PlayerLevel
+    case ItemLevel
+    case Other
+    public var _value: Swift.String? {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ProgressionSource : Swift.Int {
+    case Undefined
+    case CoreContent
+    case OptionalContent
+    case Boss
+    case Social
+    case SpecialEvent
+    case Other
+    public var _value: Swift.String? {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public func AddProgressionEvent(status: ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus, type: ISNeftaCustomAdapter.NeftaEvents.ProgressionType, source: ISNeftaCustomAdapter.NeftaEvents.ProgressionSource)
+  @objc public func AddProgressionEvent(status: ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus, type: ISNeftaCustomAdapter.NeftaEvents.ProgressionType, source: ISNeftaCustomAdapter.NeftaEvents.ProgressionSource, name: Swift.String?, value: Swift.Int)
+  @objc public func AddProgressionEvent(status: ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus, type: ISNeftaCustomAdapter.NeftaEvents.ProgressionType, source: ISNeftaCustomAdapter.NeftaEvents.ProgressionSource, name: Swift.String?, value: Swift.Int, customPayload: Swift.String?)
+  @objc public enum ResourceCategory : Swift.Int {
+    case Undefined
+    case SoftCurrency
+    case PremiumCurrency
+    case Resource
+    case CoreItem
+    case CosmeticItem
+    case Consumable
+    case Experience
+    case Chest
+    case Other
+    public var _value: Swift.String? {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ReceiveMethod : Swift.Int {
+    case Undefined
+    case LevelEnd
+    case Reward
+    case Loot
+    case Shop
+    case Iap
+    case Create
+    case Other
+    public var _value: Swift.String? {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public func AddReceiveEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod)
+  @objc public func AddReceiveEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod, name: Swift.String?, quantity: Swift.Int)
+  @objc public func AddReceiveEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod, name: Swift.String?, quantity: Swift.Int, customPayload: Swift.String?)
+  @objc public enum SpendMethod : Swift.Int {
+    case Undefined
+    case Boost
+    case Continuity
+    case Create
+    case Unlock
+    case Upgrade
+    case Shop
+    case Looted
+    case Other
+    public var _value: Swift.String? {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public func AddSpendEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.SpendMethod)
+  @objc public func AddSpendEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.SpendMethod, name: Swift.String?, quantity: Swift.Int)
+  @objc public func AddSpendEvent(category: ISNeftaCustomAdapter.NeftaEvents.ResourceCategory, method: ISNeftaCustomAdapter.NeftaEvents.SpendMethod, name: Swift.String?, quantity: Swift.Int, customPayload: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class NeftaPlugin_iOS : ISNeftaCustomAdapter.NeftaPlugin {
+  @objc public func Init(uiView: UIKit.UIView, appId: Swift.String?, useMessages: Swift.Bool)
+  @objc override public func Init(appId: Swift.String?, useMessages: Swift.Bool)
+  @objc public func PrepareRenderer(uiView: UIKit.UIView)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ISNeftaCustomBanner) public class ISNeftaCustomBanner : IronSource.ISBaseBanner {
+  @objc override dynamic public func loadAd(with adData: IronSource.ISAdData, viewController: UIKit.UIViewController, size: IronSource.ISBannerSize, delegate: any IronSource.ISBannerAdDelegate)
+  @objc override dynamic public func destroyAd(with adData: IronSource.ISAdData)
+  @objc override dynamic public init(_ providerConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init(adUnit: IronSource.ISAdUnit, adapterConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class Placement : ObjectiveC.NSObject {
+  @objc public enum Types : Swift.Int, Swift.CustomStringConvertible {
+    case Banner = 0
+    case Interstitial = 1
+    case RewardedVideo = 2
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum Modes : Swift.Int {
+    case Manual = 0
+    case ScheduledBid = 1
+    case ScheduledLoad = 2
+    case Continuous = 3
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public var _id: Swift.String
+  @objc public var _type: ISNeftaCustomAdapter.Placement.Types
+  @objc public var _availableBid: ISNeftaCustomAdapter.BidResponse?
+  @objc public var _bufferBid: ISNeftaCustomAdapter.BidResponse?
+  @objc public var _renderedBid: ISNeftaCustomAdapter.BidResponse?
+  @objc public var _renderedWidth: Swift.Int
+  @objc public var _renderedHeight: Swift.Int
+  @objc public var _mode: ISNeftaCustomAdapter.Placement.Modes
+  @objc public var _bidTime: Swift.UInt
+  @objc public var _loadTime: Swift.UInt
+  @objc public var _showTime: Swift.UInt
+  @objc public var _timeSinceContinuousLoad: Swift.UInt
+  @objc public func IsBidding() -> Swift.Bool
+  @objc public func IsLoading() -> Swift.Bool
+  @objc public func CanLoad() -> Swift.Bool
+  @objc public func CanShow() -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class WebPlacement : ISNeftaCustomAdapter.Placement {
+  @objc public var _position: Swift.String?
+  @objc public var _width: Swift.Int
+  @objc public var _height: Swift.Int
+  @objc public var _bufferWebController: ISNeftaCustomAdapter.WebController?
+  @objc public var _renderWebController: ISNeftaCustomAdapter.WebController?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class VideoPlacement : ISNeftaCustomAdapter.Placement {
+  @_inheritsConvenienceInitializers @objc public class Creative : ObjectiveC.NSObject {
+    @objc public var _mediaFiles: [ISNeftaCustomAdapter.VideoPlacement.MediaFile]
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc public class MediaFile : ObjectiveC.NSObject {
+    @objc public var _url: Swift.String?
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc public var _creatives: [ISNeftaCustomAdapter.VideoPlacement.Creative]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ISNeftaCustomRewardedVideo) public class ISNeftaCustomRewardedVideo : IronSource.ISBaseRewardedVideo {
+  @objc override dynamic public func loadAd(with adData: IronSource.ISAdData, delegate: any IronSource.ISRewardedVideoAdDelegate)
+  @objc override dynamic public func showAd(with viewController: UIKit.UIViewController, adData: IronSource.ISAdData, delegate: any IronSource.ISRewardedVideoAdDelegate)
+  @objc override dynamic public func isAdAvailable(with adData: IronSource.ISAdData) -> Swift.Bool
+  @objc override dynamic public init(_ providerConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init(adUnit: IronSource.ISAdUnit, adapterConfig: IronSource.ISAdapterConfig)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class BidResponse : ObjectiveC.NSObject {
+  @objc public var _id: Swift.String!
+  @objc public var _impressionId: Swift.String?
+  @objc public var _price: Swift.Float
+  @objc public var _winNoticeUrl: Swift.String?
+  @objc public var _adMarkup: Swift.String?
+  @objc public var _advertiserDomain: [Swift.String]?
+  @objc public var _campaignId: Swift.String?
+  @objc public var _creativeQualityCheck: Swift.Bool
+  @objc public var _trackingClickUrl: Swift.String?
+  @objc public var _redirectClickUrl: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class NeftaPlugin : ObjectiveC.NSObject {
+  public typealias OnReadyBlock = (([Swift.String : ISNeftaCustomAdapter.Placement]) -> Swift.Void)
+  public typealias OnChangeBlock = ((ISNeftaCustomAdapter.Placement.Types, ISNeftaCustomAdapter.Placement) -> Swift.Void)
+  public typealias OnBidBlock = ((ISNeftaCustomAdapter.Placement.Types, ISNeftaCustomAdapter.Placement, ISNeftaCustomAdapter.BidResponse?) -> Swift.Void)
+  public typealias OnLoadFailBlock = ((ISNeftaCustomAdapter.Placement.Types, ISNeftaCustomAdapter.Placement, Swift.String?) -> Swift.Void)
+  public typealias OnShowBlock = ((ISNeftaCustomAdapter.Placement.Types, ISNeftaCustomAdapter.Placement, Swift.Int, Swift.Int) -> Swift.Void)
+  public static let Version: Swift.String
+  @objc public var Events: ISNeftaCustomAdapter.NeftaEvents
+  @objc public var OnReady: ISNeftaCustomAdapter.NeftaPlugin.OnReadyBlock?
+  @objc public var OnBid: ISNeftaCustomAdapter.NeftaPlugin.OnBidBlock?
+  @objc public var OnLoadStart: ISNeftaCustomAdapter.NeftaPlugin.OnChangeBlock?
+  @objc public var OnLoadFail: ISNeftaCustomAdapter.NeftaPlugin.OnLoadFailBlock?
+  @objc public var OnLoad: ISNeftaCustomAdapter.NeftaPlugin.OnChangeBlock?
+  @objc public var OnShow: ISNeftaCustomAdapter.NeftaPlugin.OnShowBlock?
+  @objc public var OnClick: ISNeftaCustomAdapter.NeftaPlugin.OnChangeBlock?
+  @objc public var OnClose: ISNeftaCustomAdapter.NeftaPlugin.OnChangeBlock?
+  @objc public var OnReward: ISNeftaCustomAdapter.NeftaPlugin.OnChangeBlock?
+  @objc override dynamic public init()
+  @objc public func Init(appId: Swift.String?, useMessages: Swift.Bool)
+  @objc public func EnableAds(enable: Swift.Bool)
+  @objc public func GetToolboxUser() -> Swift.String?
+  @objc public func SetToolboxUser(json: Swift.String)
+  @objc public func Record(event: Swift.String)
+  @objc public func SetPublisherUserId(id: Swift.String)
+  @objc public func SetPlacementMode(type: ISNeftaCustomAdapter.Placement.Types, mode: ISNeftaCustomAdapter.Placement.Modes)
+  @objc public func SetPlacementMode(id: Swift.String, mode: ISNeftaCustomAdapter.Placement.Modes)
+  @objc public func Bid(type: ISNeftaCustomAdapter.Placement.Types)
+  @objc public func Bid(id: Swift.String)
+  @objc public func Load(type: ISNeftaCustomAdapter.Placement.Types)
+  @objc public func Load(id: Swift.String)
+  @objc public func IsReady(type: ISNeftaCustomAdapter.Placement.Types) -> Swift.Bool
+  @objc public func IsReady(id: Swift.String) -> Swift.Bool
+  @objc public func Show(type: ISNeftaCustomAdapter.Placement.Types)
+  @objc public func Show(id: Swift.String)
+  @objc public func Close()
+  @objc public func Close(id: Swift.String)
+  @objc public func GetMessage() -> Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ISNeftaCustomAdapter) public class ISNeftaCustomAdapter : IronSource.ISBaseNetworkAdapter {
+  @objc override dynamic public func `init`(_ adData: IronSource.ISAdData, delegate: any IronSource.ISNetworkInitializationDelegate)
+  @objc override dynamic public func networkSDKVersion() -> Swift.String
+  @objc override dynamic public func adapterVersion() -> Swift.String
+  public func Load(listener: any IronSource.ISAdapterAdDelegate, type: ISNeftaCustomAdapter.Placement.Types)
+  public func IsReady(type: ISNeftaCustomAdapter.Placement.Types) -> Swift.Bool
+  public func SetViewController(viewController: UIKit.UIViewController)
+  public func Show(type: ISNeftaCustomAdapter.Placement.Types)
+  public func Close(type: ISNeftaCustomAdapter.Placement.Types)
+  @objc deinit
+}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionType : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionType : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionType : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionSource : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionSource : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ProgressionSource : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ResourceCategory : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ResourceCategory : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ResourceCategory : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.ReceiveMethod : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.NeftaEvents.SpendMethod : Swift.Equatable {}
+extension ISNeftaCustomAdapter.NeftaEvents.SpendMethod : Swift.Hashable {}
+extension ISNeftaCustomAdapter.NeftaEvents.SpendMethod : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.Placement.Types : Swift.Equatable {}
+extension ISNeftaCustomAdapter.Placement.Types : Swift.Hashable {}
+extension ISNeftaCustomAdapter.Placement.Types : Swift.RawRepresentable {}
+extension ISNeftaCustomAdapter.Placement.Modes : Swift.Equatable {}
+extension ISNeftaCustomAdapter.Placement.Modes : Swift.Hashable {}
+extension ISNeftaCustomAdapter.Placement.Modes : Swift.RawRepresentable {}

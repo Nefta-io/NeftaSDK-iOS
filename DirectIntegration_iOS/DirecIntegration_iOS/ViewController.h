@@ -10,10 +10,8 @@
 
 @interface ViewController : UIViewController
 @property NeftaPlugin_iOS *plugin;
-@property (weak, nonatomic) IBOutlet UISwitch *_autoLoadSwitch;
-@property (weak, nonatomic) IBOutlet UIView *_placementContainer;
+@property (weak, nonatomic) IBOutlet UIView *placementContainer;
+@property (weak, nonatomic) IBOutlet UILabel *appIdLabel;
 @property NSMutableDictionary* controllers;
-
-- (IBAction)_onAutoLoadChange:(id)sender;
 @end
 

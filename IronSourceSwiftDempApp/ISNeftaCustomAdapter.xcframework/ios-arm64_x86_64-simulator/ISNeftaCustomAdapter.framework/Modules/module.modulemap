@@ -1,0 +1,11 @@
+framework module ISNeftaCustomAdapter {
+  umbrella header "ISNeftaCustomAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module ISNeftaCustomAdapter.Swift {
+  header "ISNeftaCustomAdapter-Swift.h"
+  requires objc
+}

@@ -10,18 +10,17 @@
 
 @implementation PlacementUiView
 
--(void)SetPlacement:(NeftaPlugin_iOS *) plugin with: (Placement *) placement autoLoad: (BOOL) autoLoad {
+-(void)SetPlacement:(NeftaPlugin_iOS *) plugin with: (Placement *) placement {
     _plugin = plugin;
     _placement = placement;
-    _isAutoLoad = autoLoad;
     
     NSString *name;
-    if (placement._type == 0) {
-        name = [NSString stringWithFormat:@"BANNER(%@)", placement._id];
-    } else if (placement._type == 1) {
-        name = [NSString stringWithFormat:@"INTERSTITIAL(%@)", placement._id];
-    } else if (placement._type == 2) {
-        name = [NSString stringWithFormat:@"REWARDED(%@)", placement._id];
+    if (placement._type == TypesBanner) {
+        name = [NSString stringWithFormat:@"Banner(%@)", placement._id];
+    } else if (placement._type == TypesInterstitial) {
+        name = [NSString stringWithFormat:@"Interstitial(%@)", placement._id];
+    } else if (placement._type == TypesRewardedVideo) {
+        name = [NSString stringWithFormat:@"Rewarded(%@)", placement._id];
     }
     [_nameLabel setText: name];
     
@@ -33,21 +32,16 @@
     [self SyncUi];
 }
 
--(void)SetAutoLoad:(BOOL)autoLoad {
-    _isAutoLoad = autoLoad;
-}
-
 - (IBAction)OnBidClick:(id)sender {
-    if (_isAutoLoad) {
-        [_plugin BidWithAutoLoadWithId: _placement._id];
-    } else {
-        [_plugin BidWithId: _placement._id];
-    }
+    [_plugin BidWithId: _placement._id];
+
     [self SyncUi];
 }
 
 - (IBAction)OnLoadClick:(id)sender {
     [_plugin LoadWithId: _placement._id];
+    int abc = 3;
+    [_plugin SetPlacementModeWithType: abc mode: 2];
 }
 
 - (IBAction)OnShowClick:(id)sender {
@@ -84,7 +78,6 @@
 
 - (void)SyncUi {
     NSString *bid;
-    NSLog(@"Syncui isbidding:%d canLoad:%d isloading:%d",_placement._isBidding, _placement.CanLoad, _placement._isLoading);
     if (_placement._availableBid == nil) {
         bid = @"Available bid:";
     } else {
@@ -92,7 +85,7 @@
     }
     [_availableBidLabel setText:bid];
  
-    if (_placement._isBidding) {
+    if (_placement.IsBidding) {
         [_bidButton setEnabled: false];
         [_bidButton setTitle: @"Bidding" forState: UIControlStateDisabled];
     } else {
@@ -105,7 +98,7 @@
         [_loadButton setTitle: @"Load" forState: UIControlStateNormal];
     } else {
         [_loadButton setEnabled: false ];
-        [_loadButton setTitle: _placement._isLoading ? @"Loading" : @"Load" forState: UIControlStateDisabled];
+        [_loadButton setTitle: _placement.IsLoading ? @"Loading" : @"Load" forState: UIControlStateDisabled];
     }
     
     if (_placement._bufferBid == nil) {

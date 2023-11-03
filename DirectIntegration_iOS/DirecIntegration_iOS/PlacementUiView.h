@@ -20,10 +20,8 @@
 
 @property NeftaPlugin_iOS *plugin;
 @property Placement *placement;
-@property bool isAutoLoad;
 
--(void)SetPlacement:(NeftaPlugin_iOS *) plugin with:(Placement *) placement autoLoad: (BOOL) autoLoad;
--(void)SetAutoLoad:(BOOL) autoLoad;
+-(void)SetPlacement:(NeftaPlugin_iOS *) plugin with:(Placement *) placement;
 -(void)OnBidClick:(UIButton *) sender;
 -(void)OnLoadClick:(UIButton *) sender;
 -(void)OnShowClick:(UIButton *) sender;
