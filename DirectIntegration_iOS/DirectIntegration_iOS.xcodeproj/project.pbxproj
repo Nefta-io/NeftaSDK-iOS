@@ -21,16 +21,6 @@
 		90F45CA92AB1A5F2003A741F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45CA82AB1A5F2003A741F /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		902E47022AF4F32600E3E475 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 902E46FE2AF4F32600E3E475 /* IronSourceSwiftDemoApp.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 471A2A3B1E66D27900217BE4;
-			remoteInfo = IronSourceSwiftDemoApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		90B2532D2AD9466C005EB85A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -46,7 +36,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		902E46FE2AF4F32600E3E475 /* IronSourceSwiftDemoApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IronSourceSwiftDemoApp.xcodeproj; path = ../IronSourceSwiftDempApp/IronSourceSwiftDemoApp.xcodeproj; sourceTree = "<group>"; };
 		908A5A7F2ADE92E4000EF8C2 /* NeftaPlugin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeftaPlugin.xcframework; sourceTree = "<group>"; };
 		90E92D1F2AB709E500B7E68C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
@@ -79,20 +68,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		902E46FF2AF4F32600E3E475 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				902E47032AF4F32600E3E475 /* IronSourceSwiftDemoApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		90E92D1E2AB709E400B7E68C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				908A5A7F2ADE92E4000EF8C2 /* NeftaPlugin.xcframework */,
 				90E92D1F2AB709E500B7E68C /* UIKit.framework */,
-				902E46FE2AF4F32600E3E475 /* IronSourceSwiftDemoApp.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,28 +162,12 @@
 			mainGroup = 90F45C8A2AB1A5F2003A741F;
 			productRefGroup = 90F45C942AB1A5F2003A741F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 902E46FF2AF4F32600E3E475 /* Products */;
-					ProjectRef = 902E46FE2AF4F32600E3E475 /* IronSourceSwiftDemoApp.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				90F45C922AB1A5F2003A741F /* DirectIntegration_iOS */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		902E47032AF4F32600E3E475 /* IronSourceSwiftDemoApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = IronSourceSwiftDemoApp.app;
-			remoteRef = 902E47022AF4F32600E3E475 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		90F45C912AB1A5F2003A741F /* Resources */ = {

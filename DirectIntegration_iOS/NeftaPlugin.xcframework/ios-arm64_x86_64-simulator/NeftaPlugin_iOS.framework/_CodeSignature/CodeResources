@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/NeftaPlugin_iOS-Swift.h</key>
 		<data>
-		jKozsD/75q+usfHvrmf5URub9Vc=
+		wCVHWlHzO+n8mzvUz/bqA5Kp+HQ=
 		</data>
 		<key>Headers/NeftaPlugin_iOS.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ABeFSlNj1sU3dQk1yoCyQUV+bNM=
+		cWinJewB2dIjXdWAc+yeppDURKQ=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		FM+u5yvHt/B+JKdpm57WCGRYRXQ=
+		FiC/RA9bwNy/zwwe0vPYdcZi0bo=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FM+u5yvHt/B+JKdpm57WCGRYRXQ=
+		FiC/RA9bwNy/zwwe0vPYdcZi0bo=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yXQDbzHtG73MhkEAc1Mr9eAaqrQ=
+		irZQt1ciB3LnW+EF2sT+ANPuDUI=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ABeFSlNj1sU3dQk1yoCyQUV+bNM=
+		cWinJewB2dIjXdWAc+yeppDURKQ=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mQkiG3jx2+/aGkQixM94RwK8G/A=
+		y2PgpFl45Zcl4imN0gxcsmmjrRA=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mQkiG3jx2+/aGkQixM94RwK8G/A=
+		y2PgpFl45Zcl4imN0gxcsmmjrRA=
 		</data>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		td6ipVTMHkrxPIxZrSDicItOuSg=
+		QIKjuRHwcm+O+UKhwzCVOQYgYiU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YkIaar/WoHNVzZpAIdtKf2EKvsC3+jK7dQwoJFpJEMA=
+			oZ7+rAD19dO/AAnjh/UkU2sH0w2vBpsgxDNUYkPvj4I=
 			</data>
 		</dict>
 		<key>Headers/NeftaPlugin_iOS.h</key>
@@ -92,14 +92,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VJ/SjyibQQXr1ukT9fUSiwSO1ZnHdX/QZvKeAwT5K5k=
+			MNLTtp+YpgQlpW58MKrRCvg+Axku+npKO0mkLGXWUk8=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H5WyFT1hokl9Q3VHlaXGAOVBOmCGZeL4QYiZ0XayRps=
+			XvtrNyErj0tkgbSrMd84ImUT5mNK/GTtjgKNPiSn5Ac=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +113,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H5WyFT1hokl9Q3VHlaXGAOVBOmCGZeL4QYiZ0XayRps=
+			XvtrNyErj0tkgbSrMd84ImUT5mNK/GTtjgKNPiSn5Ac=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hoy2gQS5e0r1+kvZg3g8KSHhrRkoQgmKVK4qg6g0Zhc=
+			+5Ou9eIOjDg6+gq3UmS8roS/Br9wCo0JOqpuWvMkvoA=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VJ/SjyibQQXr1ukT9fUSiwSO1ZnHdX/QZvKeAwT5K5k=
+			MNLTtp+YpgQlpW58MKrRCvg+Axku+npKO0mkLGXWUk8=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XRKofg65KLEpD2cSAsAwDaS1iT+J7HtLitaxsF2kYlA=
+			1G7CWTPUETEp9yF1QZsDWT3pCJcyGMkdO30NoP6caJk=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XRKofg65KLEpD2cSAsAwDaS1iT+J7HtLitaxsF2kYlA=
+			1G7CWTPUETEp9yF1QZsDWT3pCJcyGMkdO30NoP6caJk=
 			</data>
 		</dict>
 		<key>Modules/NeftaPlugin_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ALPEsHq0rugP8AVBunUdUat7D0H56eczWIE+nYb14AA=
+			4cgxkAKAdxmfE6vvQOwy0fZB2zYisY2BsvscHARL+88=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

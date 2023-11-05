@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/ISNeftaCustomAdapter-Swift.h</key>
 		<data>
-		ZR5VCaEVi4uZ675ZGzYwJskUQtU=
+		KKUB81rDlD9G8q1npnXI0mBvnYA=
 		</data>
 		<key>Headers/ISNeftaCustomAdapter.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		c5XvVyaJSGEJk4jp/nCQLopx0jA=
+		AYODEm4tcu5M5pE40cqIFPT//yw=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		f6HIyt/CX9rz0H79z4pPD+bcBQc=
+		Vd4hGdWoTq5a0gBO/uxJ9Abpf6Q=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		f6HIyt/CX9rz0H79z4pPD+bcBQc=
+		Vd4hGdWoTq5a0gBO/uxJ9Abpf6Q=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		3+pyVamYAU7MAz7948oWCTEDgVg=
+		Trd58ECoOJ8wBqUUussLT6SNE5M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xMjhyzoJ4hJ+jlWR+ufbKrWniDgYkiPbfbTfvaWC/LM=
+			OUWS35DUOaTu5oRn4lfMYAGZsBNg/hDTtFRVFQA5dJg=
 			</data>
 		</dict>
 		<key>Headers/ISNeftaCustomAdapter.h</key>
@@ -72,14 +72,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6WTj7ggbbP5RIGU6C3QDt/+4MEp2aLrxPfTWqnOaSe0=
+			bL7gd9TwSezRJ1h4UmGAbYYG1hf4m8ooDriv79NTetI=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I6A68QcOagKp5haokit3ejI0877NxscWt0IdGvIGq00=
+			9HJ8eEXqKDSpA5Ri4uhpKdR/f16n8k+deRosnLLkH6U=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I6A68QcOagKp5haokit3ejI0877NxscWt0IdGvIGq00=
+			9HJ8eEXqKDSpA5Ri4uhpKdR/f16n8k+deRosnLLkH6U=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iirvjuyq+qsjaxSWCC27MTsrtW9UrcY6DQ6/5qynisg=
+			kv87pnnHjAt8wsj3w+mh3NEWIMY0bh5rWpXau59uuW0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

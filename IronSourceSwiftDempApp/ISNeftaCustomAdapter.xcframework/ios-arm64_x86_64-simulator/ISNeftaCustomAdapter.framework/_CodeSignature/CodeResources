@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/ISNeftaCustomAdapter-Swift.h</key>
 		<data>
-		xzs922rHFMTieBprRGDWqROZddA=
+		/uMdJtN+4qODgQIF1zHe+atRQcY=
 		</data>
 		<key>Headers/ISNeftaCustomAdapter.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		c5XvVyaJSGEJk4jp/nCQLopx0jA=
+		AYODEm4tcu5M5pE40cqIFPT//yw=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		kzGRAi+p38P6GHd1+V6IAymGoAU=
+		TPQHrObWOS6jPgusJmr71yRnpss=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kzGRAi+p38P6GHd1+V6IAymGoAU=
+		TPQHrObWOS6jPgusJmr71yRnpss=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kZq0UoHnQPMRzUCLIhEP4KHT0DY=
+		EPHN7hL2O1g+X7D/J3Pe8iDNIK0=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		c5XvVyaJSGEJk4jp/nCQLopx0jA=
+		AYODEm4tcu5M5pE40cqIFPT//yw=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HwqT+zS0O6txQpArhNfYF6ufjLk=
+		rR/u0abqd5YDPWme+W/5g0YjCns=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HwqT+zS0O6txQpArhNfYF6ufjLk=
+		rR/u0abqd5YDPWme+W/5g0YjCns=
 		</data>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PzQ9Nex+AWfylGXddDM1+FxHD2c=
+		LEUlC9PuZTB2A4vEjWAmaJgZUC4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DfwJ61VKEOJKcJK7qEaBaQeb4keVKHNM7lfzU2VnLZ0=
+			hdxBrUTuK2cn6LNdV5v6DY6U3XZ6qyqjpBjEEz66OR0=
 			</data>
 		</dict>
 		<key>Headers/ISNeftaCustomAdapter.h</key>
@@ -92,14 +92,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6WTj7ggbbP5RIGU6C3QDt/+4MEp2aLrxPfTWqnOaSe0=
+			bL7gd9TwSezRJ1h4UmGAbYYG1hf4m8ooDriv79NTetI=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BeBi69KjnP9gSvR6S5iQi3wCbg4EHdT4sWpTAV2Pebo=
+			JHGQRUQwZuTCoJPxaU3ZyxJxzCszYEYPjQZvBl/X6Fk=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +113,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BeBi69KjnP9gSvR6S5iQi3wCbg4EHdT4sWpTAV2Pebo=
+			JHGQRUQwZuTCoJPxaU3ZyxJxzCszYEYPjQZvBl/X6Fk=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b6TD+rJPDD+fTSZttarz34FAO02jRZh2EbHwiEUlTWA=
+			NvCSZ2gvq82G/LX/p0rhm+1F7vvGZcKx/RQLeLjwAtU=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6WTj7ggbbP5RIGU6C3QDt/+4MEp2aLrxPfTWqnOaSe0=
+			bL7gd9TwSezRJ1h4UmGAbYYG1hf4m8ooDriv79NTetI=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GXfE6iRl97ogcNBJ1yj1TQMCYSmpssQ9OPceW1A91UM=
+			Rprm6/sl6AGDqQpdpPn+JmeqEh4xoDE4is9jQPTrc+Q=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GXfE6iRl97ogcNBJ1yj1TQMCYSmpssQ9OPceW1A91UM=
+			Rprm6/sl6AGDqQpdpPn+JmeqEh4xoDE4is9jQPTrc+Q=
 			</data>
 		</dict>
 		<key>Modules/ISNeftaCustomAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9FJC57iavdFz65//b9kHi7/jibJPqu16OgyW8tJSUyo=
+			ukbBCAG4R44FCODO9zFEOF8gi7a7qBnhBGAHml6kZsk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

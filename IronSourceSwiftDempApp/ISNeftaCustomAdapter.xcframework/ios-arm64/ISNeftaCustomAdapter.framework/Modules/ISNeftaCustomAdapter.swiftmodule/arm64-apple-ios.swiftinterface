@@ -15,11 +15,12 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
-@_hasMissingDesignatedInitializers @objc public class WebController : ObjectiveC.NSObject, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class WebController : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
   public typealias OnLoadBlock = ((ISNeftaCustomAdapter.Placement, Swift.String?) -> Swift.Void)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  public typealias OnClickBlock = (() -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ISNeftaCustomInterstitial) public class ISNeftaCustomInterstitial : IronSource.ISBaseInterstitial {
@@ -293,11 +294,11 @@ import _StringProcessing
   @objc override dynamic public func `init`(_ adData: IronSource.ISAdData, delegate: any IronSource.ISNetworkInitializationDelegate)
   @objc override dynamic public func networkSDKVersion() -> Swift.String
   @objc override dynamic public func adapterVersion() -> Swift.String
-  public func Load(listener: any IronSource.ISAdapterAdDelegate, type: ISNeftaCustomAdapter.Placement.Types)
-  public func IsReady(type: ISNeftaCustomAdapter.Placement.Types) -> Swift.Bool
+  public func Load(listener: any IronSource.ISAdapterAdDelegate, id: Swift.String)
+  public func IsReady(id: Swift.String) -> Swift.Bool
   public func SetViewController(viewController: UIKit.UIViewController)
-  public func Show(type: ISNeftaCustomAdapter.Placement.Types)
-  public func Close(type: ISNeftaCustomAdapter.Placement.Types)
+  public func Show(id: Swift.String)
+  public func Close(id: Swift.String)
   @objc deinit
 }
 extension ISNeftaCustomAdapter.NeftaEvents.ProgressionStatus : Swift.Equatable {}
