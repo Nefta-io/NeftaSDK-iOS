@@ -12,9 +12,9 @@
 		471A2A441E66D27A00217BE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471A2A421E66D27A00217BE4 /* Main.storyboard */; };
 		471A2A461E66D27A00217BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471A2A451E66D27A00217BE4 /* Assets.xcassets */; };
 		471A2A491E66D27A00217BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471A2A471E66D27A00217BE4 /* LaunchScreen.storyboard */; };
-		906594582AFA2F3600A7C143 /* ISNeftaCustomAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907B4AA12AFA2F20005718E0 /* ISNeftaCustomAdapter.xcframework */; };
-		906594592AFA2F3600A7C143 /* ISNeftaCustomAdapter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 907B4AA12AFA2F20005718E0 /* ISNeftaCustomAdapter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		907B4A9F2AFA2ED0005718E0 /* IronSource.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90180C6E2AE7EB5B00F7BDB4 /* IronSource.xcframework */; };
+		900A5A5A2AFA71470057098B /* ISNeftaCustomAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900A5A592AFA710D0057098B /* ISNeftaCustomAdapter.xcframework */; };
+		900A5A5B2AFA71470057098B /* ISNeftaCustomAdapter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 900A5A592AFA710D0057098B /* ISNeftaCustomAdapter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		900A5A5C2AFA71580057098B /* IronSource.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90180C6E2AE7EB5B00F7BDB4 /* IronSource.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				906594592AFA2F3600A7C143 /* ISNeftaCustomAdapter.xcframework in Embed Frameworks */,
+				900A5A5B2AFA71470057098B /* ISNeftaCustomAdapter.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,8 +42,8 @@
 		471A2A4A1E66D27A00217BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E55B5CAAD662BC5F456F258 /* Pods-IronSourceSwiftDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronSourceSwiftDemoApp.release.xcconfig"; path = "Target Support Files/Pods-IronSourceSwiftDemoApp/Pods-IronSourceSwiftDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		8C2849ED84A55F7AFC2C8C9B /* Pods_IronSourceSwiftDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronSourceSwiftDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		900A5A592AFA710D0057098B /* ISNeftaCustomAdapter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ISNeftaCustomAdapter.xcframework; sourceTree = "<group>"; };
 		90180C6E2AE7EB5B00F7BDB4 /* IronSource.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IronSource.xcframework; path = Pods/IronSourceSDK/IronSource/IronSource.xcframework; sourceTree = "<group>"; };
-		907B4AA12AFA2F20005718E0 /* ISNeftaCustomAdapter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ISNeftaCustomAdapter.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906594582AFA2F3600A7C143 /* ISNeftaCustomAdapter.xcframework in Frameworks */,
-				907B4A9F2AFA2ED0005718E0 /* IronSource.xcframework in Frameworks */,
+				900A5A5C2AFA71580057098B /* IronSource.xcframework in Frameworks */,
+				900A5A5A2AFA71470057098B /* ISNeftaCustomAdapter.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 		F0AFEE623213F9B180953967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				907B4AA12AFA2F20005718E0 /* ISNeftaCustomAdapter.xcframework */,
+				900A5A592AFA710D0057098B /* ISNeftaCustomAdapter.xcframework */,
 				90180C6E2AE7EB5B00F7BDB4 /* IronSource.xcframework */,
 				8C2849ED84A55F7AFC2C8C9B /* Pods_IronSourceSwiftDemoApp.framework */,
 			);
