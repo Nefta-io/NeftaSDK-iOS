@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NeftaPlugin_iOS/NeftaPlugin_iOS.h>
+#import <NeftaSDK/NeftaSDK-Swift.h>
 
 @interface PlacementUiView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;

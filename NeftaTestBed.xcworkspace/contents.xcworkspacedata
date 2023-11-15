@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DirectIntegration_iOS/../IronSourceSwiftDempApp/IronSourceSwiftDemoApp.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:DirectIntegration_iOS/DirectIntegration_iOS.xcodeproj">
    </FileRef>
 </Workspace>

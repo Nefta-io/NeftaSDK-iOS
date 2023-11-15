@@ -40,8 +40,6 @@
 
 - (IBAction)OnLoadClick:(id)sender {
     [_plugin LoadWithId: _placement._id];
-    int abc = 3;
-    [_plugin SetPlacementModeWithType: abc mode: 2];
 }
 
 - (IBAction)OnShowClick:(id)sender {

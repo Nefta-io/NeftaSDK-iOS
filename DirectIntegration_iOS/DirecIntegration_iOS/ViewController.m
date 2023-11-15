@@ -59,7 +59,7 @@
 
     NSString *appId = @"5070114386870272";
     [_plugin InitWithAppId: appId useMessages: false];
-    [_plugin PrepareRendererWithUiView: self.view];
+    [_plugin PrepareRendererWithView: self.view];
     
     NSString *appIdLabel;
     if (appId == nil || [appId length] == 0) {
