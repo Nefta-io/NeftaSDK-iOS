@@ -18,7 +18,8 @@
 
     _controllers = [[NSMutableDictionary alloc] init];
     
-    _plugin = [[NeftaPlugin_iOS alloc] init];
+    NSString *appId = @"5070114386870272";
+    _plugin = [NeftaPlugin_iOS InitWithAppId: appId];
     
     __unsafe_unretained typeof(self) weakSelf = self;
     
@@ -34,32 +35,31 @@
         }
     };
     
-    _plugin.OnBid = ^(Types type, Placement *placement, BidResponse *bid) {
+    _plugin.OnBid = ^(Placement *placement, BidResponse *bid) {
         [weakSelf->_controllers[placement._id] OnBid: bid];
     };
-    _plugin.OnLoadStart = ^(Types type, Placement *placement) {
+    _plugin.OnLoadStart = ^(Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadStart];
     };
-    _plugin.OnLoadFail = ^(Types type, Placement *placement, NSString *error) {
+    _plugin.OnLoadFail = ^(Placement *placement, NSString *error) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadFail: error];
     };
-    _plugin.OnLoad = ^(Types type, Placement *placement) {
+    _plugin.OnLoad = ^(Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoad];
     };
-    _plugin.OnShow = ^(Types type, Placement *placement, NSInteger width, NSInteger height) {
+    _plugin.OnShow = ^(Placement *placement, NSInteger width, NSInteger height) {
         [weakSelf->_controllers[placement._id] OnShow: width height:height];
     };
-    _plugin.OnClose = ^(Types type, Placement *placement) {
+    _plugin.OnClose = ^(Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnClose];
     };
 
-    NSString *appId = @"5070114386870272";
-    [_plugin InitWithAppId: appId useMessages: false];
     [_plugin PrepareRendererWithView: self.view];
+    [_plugin EnableAds: true];
     
     NSString *appIdLabel;
     if (appId == nil || [appId length] == 0) {

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9033B8B72B0518EE00F1A03E /* NeftaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9033B8B62B0518EE00F1A03E /* NeftaSDK.xcframework */; };
-		9033B8B82B0518EE00F1A03E /* NeftaSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9033B8B62B0518EE00F1A03E /* NeftaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9082B7652B0F3CCE00C13443 /* NeftaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */; };
+		9082B7662B0F3CCE00C13443 /* NeftaSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92D1F2AB709E500B7E68C /* UIKit.framework */; };
 		90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E92D302AB894F500B7E68C /* PlacementUiView.m */; };
 		90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E92D352AB8B21500B7E68C /* PlacementUiView.xib */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9033B8B82B0518EE00F1A03E /* NeftaSDK.xcframework in Embed Frameworks */,
+				9082B7662B0F3CCE00C13443 /* NeftaSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9033B8B62B0518EE00F1A03E /* NeftaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeftaSDK.xcframework; sourceTree = "<group>"; };
+		9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NeftaSDK.xcframework; path = ../NeftaSDK.xcframework; sourceTree = "<group>"; };
 		90E92D1F2AB709E500B7E68C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
 		90E92D322AB8988100B7E68C /* PlacementUiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementUiView.h; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */,
-				9033B8B72B0518EE00F1A03E /* NeftaSDK.xcframework in Frameworks */,
+				9082B7652B0F3CCE00C13443 /* NeftaSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 		90E92D1E2AB709E400B7E68C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9033B8B62B0518EE00F1A03E /* NeftaSDK.xcframework */,
+				9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */,
 				90E92D1F2AB709E500B7E68C /* UIKit.framework */,
 			);
 			name = Frameworks;
