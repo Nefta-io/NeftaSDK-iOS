@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Tomaz Treven' => 'treven@nefta.io' }
   s.source       = { :git => 'https://github.com/Nefta-io/Ads-for-iOS.git', :tag => '3.1.5' }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
 
   s.vendored_frameworks = 'NeftaSDK.xcframework'
 end
