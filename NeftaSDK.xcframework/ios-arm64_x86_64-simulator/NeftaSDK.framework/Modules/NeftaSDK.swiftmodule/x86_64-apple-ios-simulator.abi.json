@@ -29018,21 +29018,21 @@
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaPlugin\/NeftaEvents.swift",
       "kind": "StringLiteral",
-      "offset": 16636,
+      "offset": 16604,
       "length": 49,
       "value": "\"Error sending events: \""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaPlugin\/NeftaEvents.swift",
       "kind": "StringLiteral",
-      "offset": 16684,
+      "offset": 16652,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaPlugin\/NeftaEvents.swift",
       "kind": "StringLiteral",
-      "offset": 16765,
+      "offset": 16733,
       "length": 27,
       "value": "\"Sending events successful\""
     },
