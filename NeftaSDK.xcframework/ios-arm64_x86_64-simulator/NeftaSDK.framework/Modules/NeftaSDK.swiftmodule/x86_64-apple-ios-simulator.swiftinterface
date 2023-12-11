@@ -268,6 +268,7 @@ import _StringProcessing
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NeftaPlugin_iOS : NeftaSDK.NeftaPlugin {
+  @objc(EnableLogging:) public static func EnableLogging(enable: Swift.Bool)
   @objc public static func Init(appId: Swift.String?) -> NeftaSDK.NeftaPlugin_iOS
   @objc public func PrepareRenderer(viewController: UIKit.UIViewController)
   @objc public func PrepareRenderer(view: UIKit.UIView)

@@ -445,6 +445,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 
 SWIFT_CLASS("_TtC8NeftaSDK15NeftaPlugin_iOS")
 @interface NeftaPlugin_iOS : NeftaPlugin
++ (void)EnableLogging:(BOOL)enable;
 + (NeftaPlugin_iOS * _Nonnull)InitWithAppId:(NSString * _Nullable)appId SWIFT_WARN_UNUSED_RESULT;
 - (void)PrepareRendererWithViewController:(UIViewController * _Nonnull)viewController;
 - (void)PrepareRendererWithView:(UIView * _Nonnull)view;
