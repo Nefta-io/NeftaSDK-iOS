@@ -17,8 +17,9 @@
 -(void)viewDidAppear:(BOOL)animated {
 
     _controllers = [[NSMutableDictionary alloc] init];
-    
+
     NSString *appId = @"5070114386870272";
+    [NeftaPlugin_iOS EnableLogging: true];
     _plugin = [NeftaPlugin_iOS InitWithAppId: appId];
     
     __unsafe_unretained typeof(self) weakSelf = self;
