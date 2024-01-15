@@ -15,8 +15,10 @@
     _placement = placement;
     
     NSString *name;
+    Boolean isBanner = false;
     if (placement._type == TypesBanner) {
         name = [NSString stringWithFormat:@"Banner(%@)", placement._id];
+        isBanner = true;
     } else if (placement._type == TypesInterstitial) {
         name = [NSString stringWithFormat:@"Interstitial(%@)", placement._id];
     } else if (placement._type == TypesRewardedVideo) {
@@ -24,10 +26,20 @@
     }
     [_nameLabel setText: name];
     
+    [_enableBannerSwitch setHidden: !isBanner];
+    [_enableBannerLabel setHidden: !isBanner];
+    
+    [_enableBannerSwitch addTarget:self action:@selector(OnEnableBannerSwitch:) forControlEvents:UIControlEventValueChanged];
     [_bidButton addTarget:self action:@selector(OnBidClick:) forControlEvents:UIControlEventTouchUpInside];
     [_loadButton addTarget:self action:@selector(OnLoadClick:) forControlEvents:UIControlEventTouchUpInside];
     [_showButton addTarget:self action:@selector(OnShowClick:) forControlEvents:UIControlEventTouchUpInside];
     [_closeButton addTarget:self action:@selector(OnCloseClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self SyncUi];
+}
+
+- (IBAction)OnEnableBannerSwitch:(UISwitch *)sender {
+    [_plugin EnableBannerWithId: _placement._id enable:  sender.isOn];
     
     [self SyncUi];
 }

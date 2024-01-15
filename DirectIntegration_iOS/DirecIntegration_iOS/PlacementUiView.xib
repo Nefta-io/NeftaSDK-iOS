@@ -14,25 +14,36 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placement Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="DST-2Y-L1S" userLabel="PlacementName">
-                    <rect key="frame" x="10" y="10" width="370" height="24"/>
+                    <rect key="frame" x="10" y="5" width="370" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKb-iv-1Pe">
+                    <rect key="frame" x="10" y="30" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Bid"/>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U5M-zP-iGZ" userLabel="Enable Banner Switch">
+                    <rect key="frame" x="140" y="28" width="49" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Banner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC1-vY-fWy" userLabel="Enable Banner Label">
+                    <rect key="frame" x="220" y="30" width="110" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3sb-U7-edf" userLabel="Available Bid Label">
-                    <rect key="frame" x="10" y="35" width="275" height="18"/>
+                    <rect key="frame" x="10" y="65" width="275" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKb-iv-1Pe">
-                    <rect key="frame" x="10" y="55" width="100" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Bid"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JL5-bg-gO3">
                     <rect key="frame" x="290" y="55" width="90" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,7 +51,7 @@
                     <buttonConfiguration key="configuration" style="filled" title="Load"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buffered Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8C-QD-llD" userLabel="Buffered Bid Label">
-                    <rect key="frame" x="10" y="95" width="275" height="22"/>
+                    <rect key="frame" x="10" y="95" width="275" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
@@ -53,7 +64,7 @@
                     <buttonConfiguration key="configuration" style="filled" title="Show"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rendered Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="390-EA-UNT" userLabel="Rendered Bid Label">
-                    <rect key="frame" x="10" y="130" width="275" height="22"/>
+                    <rect key="frame" x="10" y="130" width="275" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
@@ -73,6 +84,8 @@
                 <outlet property="bidButton" destination="kKb-iv-1Pe" id="AEl-Vz-6sP"/>
                 <outlet property="bufferedBidLabel" destination="a8C-QD-llD" id="yA4-2e-cSI"/>
                 <outlet property="closeButton" destination="Utp-EQ-5g0" id="p2f-RV-981"/>
+                <outlet property="enableBannerLabel" destination="DC1-vY-fWy" id="AIF-px-NO4"/>
+                <outlet property="enableBannerSwitch" destination="U5M-zP-iGZ" id="zwK-ry-7XE"/>
                 <outlet property="loadButton" destination="JL5-bg-gO3" id="Tks-dt-q0i"/>
                 <outlet property="nameLabel" destination="DST-2Y-L1S" id="vNP-lF-HEY"/>
                 <outlet property="renderedBidLabel" destination="390-EA-UNT" id="9wy-S1-lc6"/>

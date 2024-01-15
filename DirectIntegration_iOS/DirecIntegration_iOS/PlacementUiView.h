@@ -10,8 +10,10 @@
 
 @interface PlacementUiView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *availableBidLabel;
 @property (weak, nonatomic) IBOutlet UIButton *bidButton;
+@property (weak, nonatomic) IBOutlet UISwitch *enableBannerSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *enableBannerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *availableBidLabel;
 @property (weak, nonatomic) IBOutlet UIButton *loadButton;
 @property (weak, nonatomic) IBOutlet UILabel *bufferedBidLabel;
 @property (weak, nonatomic) IBOutlet UIButton *showButton;
@@ -22,11 +24,6 @@
 @property Placement *placement;
 
 -(void)SetPlacement:(NeftaPlugin_iOS *) plugin with:(Placement *) placement;
--(void)OnBidClick:(UIButton *) sender;
--(void)OnLoadClick:(UIButton *) sender;
--(void)OnShowClick:(UIButton *) sender;
--(void)OnCloseClick:(UIButton *) sender;
-
 -(void)OnBid:(BidResponse *)bidResponse;
 -(void)OnLoadStart;
 -(void)OnLoadFail:(NSString *)error;
