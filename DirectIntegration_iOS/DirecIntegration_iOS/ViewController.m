@@ -144,7 +144,6 @@
     [_nuidLabel addGestureRecognizer: nuidGesture];
     [_nuidLabel setUserInteractionEnabled: YES];
     
-    [_plugin SetCustomBatchSize: 2];
     [_plugin.Events AddProgressionEventWithStatus:ProgressionStatusComplete type:ProgressionTypeAchievement source:ProgressionSourceUndefined];
 }
 
@@ -172,6 +171,8 @@
                                                             preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
+    
+    [_plugin.Events AddSpendEventWithCategory:ResourceCategoryOther method:SpendMethodContinuity];
 }
 
 - (void)SendLogs {
