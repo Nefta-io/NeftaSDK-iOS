@@ -122,7 +122,7 @@
         [view OnClose];
     };
     
-    [_plugin PrepareRendererWithView: self.view];
+    [_plugin PrepareRendererWithViewController: self];
     [_plugin EnableAds: true];
     
     UITapGestureRecognizer *titleGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleTapped:)];
