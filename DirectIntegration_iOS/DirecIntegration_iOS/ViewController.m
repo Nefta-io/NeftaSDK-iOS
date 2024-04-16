@@ -73,20 +73,7 @@
     __unsafe_unretained typeof(self) weakSelf = self;
     
     _plugin.OnReady = ^(NSDictionary<NSString *, Placement *> * placements) {
-        NSString* userString = [weakSelf->_plugin GetToolboxUser];
-        NSData *userData = [userString dataUsingEncoding:NSUTF8StringEncoding];
-        if (userData) {
-            NSError *error = nil;
-            id user = [NSJSONSerialization JSONObjectWithData:userData options:0 error:&error];
-            if (error) {
-                NSLog(@"Error parsing user json: %@", error.localizedDescription);
-            } else {
-                if ([user isKindOfClass:[NSDictionary class]]) {
-                    weakSelf->_nuid = user[@"user_id"];
-                    [weakSelf->_nuidLabel setText: weakSelf->_nuid];
-                }
-            }
-        }
+        [weakSelf->_nuidLabel setText: [weakSelf->_plugin GetNuidWithPresent: false]];
         
         int i = 0;
         for (NSString* placementId in placements) {
@@ -163,14 +150,7 @@
 }
 
 - (void)nuidTapped:(UITapGestureRecognizer *)gestureRecognizer {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    [pasteboard setString: _nuid];
-
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Nuid copied"
-                                                                   message:_nuid
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
+    NSString *nuid = [_plugin GetNuidWithPresent: true];
     
     [_plugin.Events AddSpendEventWithCategory:ResourceCategoryOther method:SpendMethodContinuity];
 }
