@@ -74,11 +74,11 @@
     [self SyncUi];
 }
 
-- (void)OnLoad {
+- (void)OnLoad:(NSInteger)width height:(NSInteger)height {
     [self SyncUi];
 }
 
-- (void)OnShow:(NSInteger)width height:(NSInteger)height {
+- (void)OnShow {
     [self SyncUi];
 }
 

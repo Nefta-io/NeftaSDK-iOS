@@ -13,9 +13,15 @@
 
 #import <sys/utsname.h>
 
+static NSString * const _logsKey = @"logs";
+static NSString * const _overrideUrlKey = @"overrideUrl";
+
 @implementation ViewController
 
 -(void)viewDidAppear:(BOOL)animated {
+    if (_controllers != nil) {
+        return;
+    }
     
     _controllers = [[NSMutableDictionary alloc] init];
     
@@ -34,7 +40,7 @@
     _last3LogNames = [[NSMutableArray alloc] init];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *logs = [defaults objectForKey:@"logs"];
+    NSString *logs = [defaults objectForKey: _logsKey];
     if (logs != nil && logs.length > 0) {
         NSArray *logArray = [logs componentsSeparatedByString: @","];
         long i = logArray.count - 2;
@@ -55,7 +61,11 @@
         [logStreamer writeData: [log dataUsingEncoding: NSUTF8StringEncoding]];
     };
     
-    [NeftaPlugin_iOS EnableLogging: true];
+    NSString *overrideUrl = [defaults stringForKey: _overrideUrlKey];
+    NSArray *arguments = [[NSProcessInfo processInfo] arguments];
+    if ([arguments count] > 1) {
+        overrideUrl = arguments[1];
+    }
     
     NSMutableString *newLogs = [NSMutableString string];
     for (int i = 0; i < _last3LogNames.count; i++) {
@@ -68,22 +78,55 @@
     [defaults synchronize];
     
     _appId = @"5661184053215232";
+    
+    UITapGestureRecognizer *titleGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleTapped:)];
+    [_titleLabel addGestureRecognizer: titleGesture];
+    [_titleLabel setUserInteractionEnabled: YES];
+    
+    NSString *appIdLabel;
+    if (_appId == nil || [_appId length] == 0) {
+        appIdLabel = @"Demo mode (appId not set)";
+    } else {
+        appIdLabel = [NSString stringWithFormat: @"AppId: %@", _appId];
+    }
+    [_appIdLabel setText: appIdLabel];
+    
+    [_logsButton addTarget: self action:@selector(OnSendLogs:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UITapGestureRecognizer *nuidGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nuidTapped:)];
+    [_nuidLabel addGestureRecognizer: nuidGesture];
+    [_nuidLabel setUserInteractionEnabled: YES];
+    
+    [_overrideText setText: overrideUrl];
+    [_overrideButton addTarget: self action:@selector(OnOverride:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_closeButton addTarget: self action:@selector(OnClose:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    
+    [NeftaPlugin_iOS EnableLogging: true];
     _plugin = [NeftaPlugin_iOS InitWithAppId: _appId];
+    if (overrideUrl != nil && overrideUrl.length > 0) {
+        [_plugin SetOverrideWithUrl: overrideUrl];
+    }
+    [_plugin SetCustomParameterWithId: @"5679149674921984" key: @"bidfloor" value: @0.3];
     
     __unsafe_unretained typeof(self) weakSelf = self;
     
     _plugin.OnReady = ^(NSDictionary<NSString *, Placement *> * placements) {
         [weakSelf->_nuidLabel setText: [weakSelf->_plugin GetNuidWithPresent: false]];
         
-        int i = 0;
+        float height = 0;
         for (NSString* placementId in placements) {
             PlacementUiView *controller = (PlacementUiView *)[[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
             [controller SetPlacement:weakSelf->_plugin with: placements[placementId]];
-            controller.frame = CGRectMake(0, i * 160, 390, 160);
+            controller.frame = CGRectMake(0, height, 360, 160);
             [weakSelf->_placementContainer addSubview: controller];
             weakSelf->_controllers[placementId] = controller;
-            i++;
+            height += 160;
         }
+        weakSelf.placementsScroll.contentSize = CGSizeMake(360, height);
     };
     
     _plugin.OnBid = ^(Placement *placement, BidResponse *bid) {
@@ -97,12 +140,13 @@
         PlacementUiView *view = weakSelf->_controllers[placement._id];
         [view OnLoadFail: error];
     };
-    _plugin.OnLoad = ^(Placement *placement) {
+    _plugin.OnLoad = ^(Placement *placement, NSInteger width, NSInteger height) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
-        [view OnLoad];
+        [view OnLoad: width height:height];
     };
-    _plugin.OnShow = ^(Placement *placement, NSInteger width, NSInteger height) {
-        [weakSelf->_controllers[placement._id] OnShow: width height:height];
+    _plugin.OnShow = ^(Placement *placement) {
+        PlacementUiView *view = weakSelf->_controllers[placement._id];
+        [view OnShow];
     };
     _plugin.OnClose = ^(Placement *placement) {
         PlacementUiView *view = weakSelf->_controllers[placement._id];
@@ -112,47 +156,34 @@
     [_plugin PrepareRendererWithViewController: self];
     [_plugin EnableAds: true];
     
-    UITapGestureRecognizer *titleGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleTapped:)];
-    [_titleLabel addGestureRecognizer: titleGesture];
-    [_titleLabel setUserInteractionEnabled: YES];
-    
-    NSString *appIdLabel;
-    if (_appId == nil || [_appId length] == 0) {
-        appIdLabel = @"Demo mode (appId not set)";
-    } else {
-        appIdLabel = [NSString stringWithFormat: @"AppId: %@", _appId];
-    }
-    [_appIdLabel setText: appIdLabel];
-    UITapGestureRecognizer *appIdGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(appIdTapped:)];
-    [_appIdLabel addGestureRecognizer: appIdGesture];
-    [_appIdLabel setUserInteractionEnabled: YES];
-    
-    UITapGestureRecognizer *nuidGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nuidTapped:)];
-    [_nuidLabel addGestureRecognizer: nuidGesture];
-    [_nuidLabel setUserInteractionEnabled: YES];
-    
     [_plugin.Events AddProgressionEventWithStatus:ProgressionStatusComplete type:ProgressionTypeAchievement source:ProgressionSourceUndefined];
 }
 
 - (void)titleTapped:(UITapGestureRecognizer *)gestureRecognizer {
-    [self SendLogs];
+    [_optionsView setHidden: false];
 }
 
-- (void)appIdTapped:(UITapGestureRecognizer *)gestureRecognizer {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    [pasteboard setString: _appId];
-
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"AppId copied"
-                                                                   message:_appId
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
+- (void)OnSendLogs:(UIButton *)sender {
+    [self SendLogs];
 }
 
 - (void)nuidTapped:(UITapGestureRecognizer *)gestureRecognizer {
     NSString *nuid = [_plugin GetNuidWithPresent: true];
     
     [_plugin.Events AddSpendEventWithCategory:ResourceCategoryOther method:SpendMethodContinuity];
+}
+
+- (void)OnClose:(UITapGestureRecognizer *)gestureRecognizer {
+    [_optionsView setHidden: true];
+}
+
+- (void)OnOverride:(UITapGestureRecognizer *)gestureRecognizer {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject: _overrideText.text forKey: _overrideUrlKey];
+    [defaults synchronize];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        exit(0);
+    });
 }
 
 - (void)SendLogs {

@@ -27,8 +27,8 @@
 -(void)OnBid:(BidResponse *)bidResponse;
 -(void)OnLoadStart;
 -(void)OnLoadFail:(NSString *)error;
--(void)OnLoad;
--(void)OnShow:(NSInteger)width height:(NSInteger)height;
+-(void)OnLoad:(NSInteger)width height:(NSInteger)height;
+-(void)OnShow;
 -(void)OnClose;
 
 -(void)SyncUi;

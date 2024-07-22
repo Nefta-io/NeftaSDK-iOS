@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,11 +27,11 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Bid"/>
                 </button>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U5M-zP-iGZ" userLabel="Enable Banner Switch">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nkv-vU-LU9" userLabel="Enable Banner Switch">
                     <rect key="frame" x="140" y="28" width="49" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Banner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC1-vY-fWy" userLabel="Enable Banner Label">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Banner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH4-IC-hEc" userLabel="Enable Banner Label">
                     <rect key="frame" x="220" y="30" width="110" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -45,7 +46,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JL5-bg-gO3">
-                    <rect key="frame" x="290" y="55" width="90" height="30"/>
+                    <rect key="frame" x="290" y="55" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Load"/>
@@ -58,7 +59,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="C7o-OH-On4" userLabel="Show Button">
-                    <rect key="frame" x="290" y="90" width="90" height="30"/>
+                    <rect key="frame" x="290" y="90" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Show"/>
@@ -71,7 +72,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Utp-EQ-5g0" userLabel="Close Button">
-                    <rect key="frame" x="290" y="123" width="90" height="30"/>
+                    <rect key="frame" x="290" y="123" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Close"/>
@@ -84,8 +85,8 @@
                 <outlet property="bidButton" destination="kKb-iv-1Pe" id="AEl-Vz-6sP"/>
                 <outlet property="bufferedBidLabel" destination="a8C-QD-llD" id="yA4-2e-cSI"/>
                 <outlet property="closeButton" destination="Utp-EQ-5g0" id="p2f-RV-981"/>
-                <outlet property="enableBannerLabel" destination="DC1-vY-fWy" id="AIF-px-NO4"/>
-                <outlet property="enableBannerSwitch" destination="U5M-zP-iGZ" id="zwK-ry-7XE"/>
+                <outlet property="enableBannerLabel" destination="OH4-IC-hEc" id="O40-rd-O9x"/>
+                <outlet property="enableBannerSwitch" destination="nkv-vU-LU9" id="zRw-Nw-dzq"/>
                 <outlet property="loadButton" destination="JL5-bg-gO3" id="Tks-dt-q0i"/>
                 <outlet property="nameLabel" destination="DST-2Y-L1S" id="vNP-lF-HEY"/>
                 <outlet property="renderedBidLabel" destination="390-EA-UNT" id="9wy-S1-lc6"/>
