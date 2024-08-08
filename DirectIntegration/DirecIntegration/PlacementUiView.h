@@ -20,10 +20,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *renderedBidLabel;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
-@property NeftaPlugin_iOS *plugin;
+@property (weak, nonatomic) IBOutlet UILabel *partialBid;
+@property (weak, nonatomic) IBOutlet UITextField *bidResponse;
+@property (weak, nonatomic) IBOutlet UIButton *customLoad;
+
+@property NeftaPlugin *plugin;
 @property Placement *placement;
 
--(void)SetPlacement:(NeftaPlugin_iOS *) plugin with:(Placement *) placement;
+-(void)SetPlacement:(NeftaPlugin *) plugin with:(Placement *) placement isTest:(Boolean) isTest;
 -(void)OnBid:(BidResponse *)bidResponse;
 -(void)OnLoadStart;
 -(void)OnLoadFail:(NSString *)error;

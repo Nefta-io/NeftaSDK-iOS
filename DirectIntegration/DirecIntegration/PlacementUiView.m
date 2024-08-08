@@ -10,7 +10,7 @@
 
 @implementation PlacementUiView
 
--(void)SetPlacement:(NeftaPlugin_iOS *) plugin with: (Placement *) placement {
+-(void)SetPlacement:(NeftaPlugin *) plugin with: (Placement *) placement isTest: (Boolean) isTest {
     _plugin = plugin;
     _placement = placement;
     
@@ -34,6 +34,12 @@
     [_loadButton addTarget:self action:@selector(OnLoadClick:) forControlEvents:UIControlEventTouchUpInside];
     [_showButton addTarget:self action:@selector(OnShowClick:) forControlEvents:UIControlEventTouchUpInside];
     [_closeButton addTarget:self action:@selector(OnCloseClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_customLoad addTarget:self action:@selector(OnCustomLoadClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_partialBid setText: [plugin GetPartialBidRequestAsString: placement._id]];
+    [_partialBid setHidden: !isTest];
+    [_customLoad setHidden: !isTest];
+    [_bidResponse setHidden: !isTest];
     
     [self SyncUi];
 }
@@ -60,6 +66,11 @@
 
 - (IBAction)OnCloseClick:(id)sender {
     [_plugin CloseWithId: _placement._id];
+}
+
+- (IBAction)OnCustomLoadClick:(id)sender {
+    NSString *bidResponse = [_bidResponse text];
+    [_plugin LoadWithBidResponseWithId: _placement._id bidResponse: [bidResponse dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)OnBid:(BidResponse *)bidResponse {

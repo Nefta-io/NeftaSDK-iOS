@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacementUiView" customModule="DirectIntegration_iOS" customModuleProvider="target" propertyAccessControl="none"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacementUiView" customModule="DirectIntegration" customModuleProvider="target" propertyAccessControl="none"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="SmQ-8r-Bwj" customClass="PlacementUiView">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -17,6 +17,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placement Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="DST-2Y-L1S" userLabel="PlacementName">
                     <rect key="frame" x="10" y="5" width="370" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="placementName"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -48,6 +49,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JL5-bg-gO3">
                     <rect key="frame" x="290" y="55" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="load"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Load"/>
                 </button>
@@ -61,6 +63,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="C7o-OH-On4" userLabel="Show Button">
                     <rect key="frame" x="290" y="90" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="show"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Show"/>
                 </button>
@@ -77,18 +80,48 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Close"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CqV-81-LIA" userLabel="PartialBid">
+                    <rect key="frame" x="360" y="20" width="42" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="partial_bid">
+                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="bid response" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jiq-4G-yRm" userLabel="BidResponse">
+                    <rect key="frame" x="120" y="140" width="97" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="bid_response"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7aD-1t-dJy" userLabel="CustomLoad">
+                    <rect key="frame" x="200" y="140" width="75" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" identifier="custom_load"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="2hZ-00-scL"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="placement">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="availableBidLabel" destination="3sb-U7-edf" id="dXV-Ag-iig"/>
                 <outlet property="bidButton" destination="kKb-iv-1Pe" id="AEl-Vz-6sP"/>
+                <outlet property="bidResponse" destination="Jiq-4G-yRm" id="xBl-Ct-cUQ"/>
                 <outlet property="bufferedBidLabel" destination="a8C-QD-llD" id="yA4-2e-cSI"/>
                 <outlet property="closeButton" destination="Utp-EQ-5g0" id="p2f-RV-981"/>
+                <outlet property="customLoad" destination="7aD-1t-dJy" id="vs5-T9-KUe"/>
                 <outlet property="enableBannerLabel" destination="OH4-IC-hEc" id="O40-rd-O9x"/>
                 <outlet property="enableBannerSwitch" destination="nkv-vU-LU9" id="zRw-Nw-dzq"/>
                 <outlet property="loadButton" destination="JL5-bg-gO3" id="Tks-dt-q0i"/>
                 <outlet property="nameLabel" destination="DST-2Y-L1S" id="vNP-lF-HEY"/>
+                <outlet property="partialBid" destination="CqV-81-LIA" id="ADZ-k5-G3P"/>
                 <outlet property="renderedBidLabel" destination="390-EA-UNT" id="9wy-S1-lc6"/>
                 <outlet property="showButton" destination="C7o-OH-On4" id="ysv-TY-PC1"/>
             </connections>

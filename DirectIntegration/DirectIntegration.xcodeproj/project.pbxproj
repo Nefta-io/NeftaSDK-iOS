@@ -41,7 +41,7 @@
 		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
 		90E92D322AB8988100B7E68C /* PlacementUiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementUiView.h; sourceTree = "<group>"; };
 		90E92D352AB8B21500B7E68C /* PlacementUiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacementUiView.xib; sourceTree = "<group>"; };
-		90F45C932AB1A5F2003A741F /* DirectIntegration_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectIntegration_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F45C932AB1A5F2003A741F /* DirectIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F45C962AB1A5F2003A741F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90F45C972AB1A5F2003A741F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		90F45C992AB1A5F2003A741F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		90F45C8A2AB1A5F2003A741F = {
 			isa = PBXGroup;
 			children = (
-				90F45C952AB1A5F2003A741F /* DirecIntegration_iOS */,
+				90F45C952AB1A5F2003A741F /* DirecIntegration */,
 				90F45C942AB1A5F2003A741F /* Products */,
 				90E92D1E2AB709E400B7E68C /* Frameworks */,
 			);
@@ -89,12 +89,12 @@
 		90F45C942AB1A5F2003A741F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90F45C932AB1A5F2003A741F /* DirectIntegration_iOS.app */,
+				90F45C932AB1A5F2003A741F /* DirectIntegration.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90F45C952AB1A5F2003A741F /* DirecIntegration_iOS */ = {
+		90F45C952AB1A5F2003A741F /* DirecIntegration */ = {
 			isa = PBXGroup;
 			children = (
 				90F45C962AB1A5F2003A741F /* AppDelegate.h */,
@@ -112,15 +112,15 @@
 				90F45CA82AB1A5F2003A741F /* main.m */,
 				90E92D352AB8B21500B7E68C /* PlacementUiView.xib */,
 			);
-			path = DirecIntegration_iOS;
+			path = DirecIntegration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90F45C922AB1A5F2003A741F /* DirectIntegration_iOS */ = {
+		90F45C922AB1A5F2003A741F /* DirectIntegration */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90F45CAC2AB1A5F2003A741F /* Build configuration list for PBXNativeTarget "DirectIntegration_iOS" */;
+			buildConfigurationList = 90F45CAC2AB1A5F2003A741F /* Build configuration list for PBXNativeTarget "DirectIntegration" */;
 			buildPhases = (
 				90F45C8F2AB1A5F2003A741F /* Sources */,
 				90F45C902AB1A5F2003A741F /* Frameworks */,
@@ -131,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = DirectIntegration_iOS;
+			name = DirectIntegration;
 			productName = TestbedIOS;
-			productReference = 90F45C932AB1A5F2003A741F /* DirectIntegration_iOS.app */;
+			productReference = 90F45C932AB1A5F2003A741F /* DirectIntegration.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 90F45C8E2AB1A5F2003A741F /* Build configuration list for PBXProject "DirectIntegration_iOS" */;
+			buildConfigurationList = 90F45C8E2AB1A5F2003A741F /* Build configuration list for PBXProject "DirectIntegration" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90F45C922AB1A5F2003A741F /* DirectIntegration_iOS */,
+				90F45C922AB1A5F2003A741F /* DirectIntegration */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +341,7 @@
 				DEVELOPMENT_TEAM = 2LJ985962L;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DirecIntegration_iOS/Info.plist;
+				INFOPLIST_FILE = DirecIntegration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -376,7 +376,7 @@
 				DEVELOPMENT_TEAM = 2LJ985962L;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DirecIntegration_iOS/Info.plist;
+				INFOPLIST_FILE = DirecIntegration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -401,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90F45C8E2AB1A5F2003A741F /* Build configuration list for PBXProject "DirectIntegration_iOS" */ = {
+		90F45C8E2AB1A5F2003A741F /* Build configuration list for PBXProject "DirectIntegration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90F45CAA2AB1A5F2003A741F /* Debug */,
@@ -410,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90F45CAC2AB1A5F2003A741F /* Build configuration list for PBXNativeTarget "DirectIntegration_iOS" */ = {
+		90F45CAC2AB1A5F2003A741F /* Build configuration list for PBXNativeTarget "DirectIntegration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90F45CAD2AB1A5F2003A741F /* Debug */,

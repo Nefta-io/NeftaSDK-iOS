@@ -11,27 +11,15 @@
 #import <MessageUI/MessageUI.h>
 
 @interface ViewController : UIViewController <MFMailComposeViewControllerDelegate>
-@property NSString *logDirectory;
-@property NSMutableArray *last3LogNames;
-@property NeftaPlugin_iOS *plugin;
+@property NeftaPlugin *plugin;
 @property NSString *appId;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *placementsScroll;
 @property (weak, nonatomic) IBOutlet UIView *placementContainer;
 
-@property (weak, nonatomic) IBOutlet UIView *optionsView;
-
 @property (weak, nonatomic) IBOutlet UILabel *appIdLabel;
-@property (weak, nonatomic) IBOutlet UIButton *logsButton;
-
 @property (weak, nonatomic) IBOutlet UILabel *nuidLabel;
-@property (weak, nonatomic) IBOutlet UITextField *overrideText;
 
-@property (weak, nonatomic) IBOutlet UIButton *overrideButton;
-
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property NSMutableDictionary* controllers;
-
-- (void) SendLogs;
 @end
 
