@@ -331,7 +331,7 @@ SWIFT_CLASS("_TtC8NeftaSDK11NeftaEvents")
 - (void)AddSpendEventWithCategory:(enum ResourceCategory)category method:(enum SpendMethod)method name:(NSString * _Nullable)name quantity:(NSInteger)quantity;
 - (void)AddSpendEventWithCategory:(enum ResourceCategory)category method:(enum SpendMethod)method name:(NSString * _Nullable)name quantity:(NSInteger)quantity customPayload:(NSString * _Nullable)customPayload;
 - (void)AddSessionEventWithCategory:(enum SessionCategory)category;
-- (void)AddSessionEventWithCategory:(enum SessionCategory)category name:(NSString * _Nullable)name value:(NSInteger)value customPayload:(NSString * _Nullable)customPayload log:(BOOL)log;
+- (void)AddSessionEventWithCategory:(enum SessionCategory)category name:(NSString * _Nullable)name value:(NSInteger)value customPayload:(NSString * _Nullable)customPayload log:(BOOL)log trySend:(BOOL)trySend;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -398,9 +398,10 @@ typedef SWIFT_ENUM(NSInteger, SpendMethod, open) {
 
 typedef SWIFT_ENUM(NSInteger, SessionCategory, open) {
   SessionCategorySessionStart = 0,
-  SessionCategoryAccountConnected = 1,
-  SessionCategoryAccountUpgraded = 2,
-  SessionCategoryHeartbeat = 3,
+  SessionCategorySessionPause = 1,
+  SessionCategoryAccountConnected = 2,
+  SessionCategoryAccountUpgraded = 3,
+  SessionCategoryHeartbeat = 4,
 };
 
 @class Placement;
@@ -450,11 +451,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NeftaPlugin * _Null_un
 - (void)SetPublisherUserIdWithId:(NSString * _Nonnull)id;
 - (void)SetPlacementPositionWithId:(NSString * _Nonnull)id position:(enum Position)position;
 - (void)SetPlacementModeWithId:(NSString * _Nonnull)id mode:(enum Modes)mode;
-- (void)SetCustomParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(id _Nonnull)value;
-- (void)SetCustomStringParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-- (void)SetCustomFloatParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(float)value;
-- (NSDictionary<NSString *, id> * _Nonnull)GetPartialBidRequest:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)GetPartialBidRequestAsString:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (void)SetFloorPriceWithId:(NSString * _Nonnull)id floorPrice:(float)floorPrice;
+- (void)SetCustomParameterWithId:(NSString * _Nonnull)id provider:(NSString * _Nonnull)provider value:(NSString * _Nonnull)value;
+- (NSDictionary<NSString *, id> * _Nullable)GetPartialBidRequest:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)GetPartialBidRequestAsString:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 - (void)BidWithId:(NSString * _Nonnull)id;
 - (void)LoadWithId:(NSString * _Nonnull)id;
 - (void)LoadWithBidResponseWithId:(NSString * _Nonnull)id bidResponse:(NSData * _Nonnull)bidResponse;
@@ -873,7 +873,7 @@ SWIFT_CLASS("_TtC8NeftaSDK11NeftaEvents")
 - (void)AddSpendEventWithCategory:(enum ResourceCategory)category method:(enum SpendMethod)method name:(NSString * _Nullable)name quantity:(NSInteger)quantity;
 - (void)AddSpendEventWithCategory:(enum ResourceCategory)category method:(enum SpendMethod)method name:(NSString * _Nullable)name quantity:(NSInteger)quantity customPayload:(NSString * _Nullable)customPayload;
 - (void)AddSessionEventWithCategory:(enum SessionCategory)category;
-- (void)AddSessionEventWithCategory:(enum SessionCategory)category name:(NSString * _Nullable)name value:(NSInteger)value customPayload:(NSString * _Nullable)customPayload log:(BOOL)log;
+- (void)AddSessionEventWithCategory:(enum SessionCategory)category name:(NSString * _Nullable)name value:(NSInteger)value customPayload:(NSString * _Nullable)customPayload log:(BOOL)log trySend:(BOOL)trySend;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -940,9 +940,10 @@ typedef SWIFT_ENUM(NSInteger, SpendMethod, open) {
 
 typedef SWIFT_ENUM(NSInteger, SessionCategory, open) {
   SessionCategorySessionStart = 0,
-  SessionCategoryAccountConnected = 1,
-  SessionCategoryAccountUpgraded = 2,
-  SessionCategoryHeartbeat = 3,
+  SessionCategorySessionPause = 1,
+  SessionCategoryAccountConnected = 2,
+  SessionCategoryAccountUpgraded = 3,
+  SessionCategoryHeartbeat = 4,
 };
 
 @class Placement;
@@ -992,11 +993,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NeftaPlugin * _Null_un
 - (void)SetPublisherUserIdWithId:(NSString * _Nonnull)id;
 - (void)SetPlacementPositionWithId:(NSString * _Nonnull)id position:(enum Position)position;
 - (void)SetPlacementModeWithId:(NSString * _Nonnull)id mode:(enum Modes)mode;
-- (void)SetCustomParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(id _Nonnull)value;
-- (void)SetCustomStringParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-- (void)SetCustomFloatParameterWithId:(NSString * _Nonnull)id key:(NSString * _Nonnull)key value:(float)value;
-- (NSDictionary<NSString *, id> * _Nonnull)GetPartialBidRequest:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)GetPartialBidRequestAsString:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (void)SetFloorPriceWithId:(NSString * _Nonnull)id floorPrice:(float)floorPrice;
+- (void)SetCustomParameterWithId:(NSString * _Nonnull)id provider:(NSString * _Nonnull)provider value:(NSString * _Nonnull)value;
+- (NSDictionary<NSString *, id> * _Nullable)GetPartialBidRequest:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)GetPartialBidRequestAsString:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 - (void)BidWithId:(NSString * _Nonnull)id;
 - (void)LoadWithId:(NSString * _Nonnull)id;
 - (void)LoadWithBidResponseWithId:(NSString * _Nonnull)id bidResponse:(NSData * _Nonnull)bidResponse;

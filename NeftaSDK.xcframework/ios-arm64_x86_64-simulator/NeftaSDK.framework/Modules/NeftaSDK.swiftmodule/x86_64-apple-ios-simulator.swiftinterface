@@ -131,11 +131,10 @@ import os
   @objc public func SetPublisherUserId(id: Swift.String)
   @objc public func SetPlacementPosition(id: Swift.String, position: NeftaSDK.Placement.Position)
   @objc public func SetPlacementMode(id: Swift.String, mode: NeftaSDK.Placement.Modes)
-  @objc public func SetCustomParameter(id: Swift.String, key: Swift.String, value: Any)
-  @objc public func SetCustomStringParameter(id: Swift.String, key: Swift.String, value: Swift.String)
-  @objc public func SetCustomFloatParameter(id: Swift.String, key: Swift.String, value: Swift.Float)
-  @objc(GetPartialBidRequest:) public func GetPartialBidRequest(id: Swift.String) -> [Swift.String : Any]
-  @objc(GetPartialBidRequestAsString:) public func GetPartialBidRequestAsString(id: Swift.String) -> Swift.String
+  @objc public func SetFloorPrice(id: Swift.String, floorPrice: Swift.Float)
+  @objc public func SetCustomParameter(id: Swift.String, provider: Swift.String, value: Swift.String)
+  @objc(GetPartialBidRequest:) public func GetPartialBidRequest(id: Swift.String) -> [Swift.String : Any]?
+  @objc(GetPartialBidRequestAsString:) public func GetPartialBidRequestAsString(id: Swift.String) -> Swift.String?
   @objc public func Bid(id: Swift.String)
   @objc public func Load(id: Swift.String)
   @objc public func LoadWithBidResponse(id: Swift.String, bidResponse: Foundation.Data)
@@ -258,6 +257,7 @@ import os
   @objc public func AddSpendEvent(category: NeftaSDK.NeftaEvents.ResourceCategory, method: NeftaSDK.NeftaEvents.SpendMethod, name: Swift.String?, quantity: Swift.Int, customPayload: Swift.String?)
   @objc public enum SessionCategory : Swift.Int {
     case SessionStart
+    case SessionPause
     case AccountConnected
     case AccountUpgraded
     case Heartbeat
@@ -271,7 +271,7 @@ import os
     }
   }
   @objc public func AddSessionEvent(category: NeftaSDK.NeftaEvents.SessionCategory)
-  @objc public func AddSessionEvent(category: NeftaSDK.NeftaEvents.SessionCategory, name: Swift.String?, value: Swift.Int, customPayload: Swift.String?, log: Swift.Bool)
+  @objc public func AddSessionEvent(category: NeftaSDK.NeftaEvents.SessionCategory, name: Swift.String?, value: Swift.Int, customPayload: Swift.String?, log: Swift.Bool, trySend: Swift.Bool)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class WebController : UIKit.UIView, WebKit.WKNavigationDelegate {
