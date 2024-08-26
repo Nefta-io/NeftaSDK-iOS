@@ -19,6 +19,7 @@
 		90F45CA32AB1A5F2003A741F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F45CA22AB1A5F2003A741F /* Assets.xcassets */; };
 		90F45CA62AB1A5F2003A741F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F45CA42AB1A5F2003A741F /* LaunchScreen.storyboard */; };
 		90F45CA92AB1A5F2003A741F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45CA82AB1A5F2003A741F /* main.m */; };
+		90FA45682C7C4E2200B43677 /* DebugServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FA45672C7C4E2200B43677 /* DebugServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,8 @@
 		90F45CA52AB1A5F2003A741F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90F45CA72AB1A5F2003A741F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F45CA82AB1A5F2003A741F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90FA45672C7C4E2200B43677 /* DebugServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugServer.swift; sourceTree = "<group>"; };
+		90FA456B2C7C504900B43677 /* DirectIntegration-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DirectIntegration-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 		90F45C952AB1A5F2003A741F /* DirecIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				90FA456B2C7C504900B43677 /* DirectIntegration-Bridging-Header.h */,
+				90FA45672C7C4E2200B43677 /* DebugServer.swift */,
 				90F45C962AB1A5F2003A741F /* AppDelegate.h */,
 				90F45C972AB1A5F2003A741F /* AppDelegate.m */,
 				90F45C992AB1A5F2003A741F /* SceneDelegate.h */,
@@ -147,7 +152,7 @@
 				TargetAttributes = {
 					90F45C922AB1A5F2003A741F = {
 						CreatedOnToolsVersion = 14.3;
-						LastSwiftMigration = 1430;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -190,6 +195,7 @@
 			files = (
 				90F45C9E2AB1A5F2003A741F /* ViewController.m in Sources */,
 				90F45C982AB1A5F2003A741F /* AppDelegate.m in Sources */,
+				90FA45682C7C4E2200B43677 /* DebugServer.swift in Sources */,
 				90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */,
 				90F45CA92AB1A5F2003A741F /* main.m in Sources */,
 				90F45C9B2AB1A5F2003A741F /* SceneDelegate.m in Sources */,
@@ -358,6 +364,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DirecIntegration/DirectIntegration-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,6 +400,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DirecIntegration/DirectIntegration-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

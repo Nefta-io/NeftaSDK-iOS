@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "PlacementUiView.h"
+#import "DirectIntegration-Swift.h"
 
 @implementation ViewController
 
@@ -30,19 +31,22 @@
     [NeftaPlugin EnableLogging: true];
     _plugin = [NeftaPlugin InitWithAppId: _appId];
     
-    Boolean isTest = false;
+    NSString *dmIp = nil;
+    NSString *serial = nil;
     NSArray *arguments = [[NSProcessInfo processInfo] arguments];
     if ([arguments count] > 1) {
         NSString *overrideUrl = arguments[1];
         if (overrideUrl != nil && overrideUrl.length > 0) {
             [_plugin SetOverrideWithUrl: overrideUrl];
         }
-        if ([arguments count] >= 3 && [arguments[2] isEqualToString: @"test"]) {
-            isTest = true;
+        if ([arguments count] > 3) {
+            dmIp = arguments[2];
+            serial = arguments[3];
         }
     }
     
-    [_plugin SetCustomParameterWithId: @"5679149674921984" key: @"bidfloor" value: @0.3];
+    [_plugin SetFloorPriceWithId: @"6289245710843904" floorPrice: 0.2];
+    [_plugin SetCustomParameterWithId: @"6289245710843904" provider: @"applovin-max" value: @"{\"bidfloor\":0.5}"];
     
     __unsafe_unretained typeof(self) weakSelf = self;
     
@@ -52,7 +56,7 @@
         float height = 0;
         for (NSString* placementId in placements) {
             PlacementUiView *controller = (PlacementUiView *)[[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
-            [controller SetPlacement:weakSelf->_plugin with: placements[placementId] isTest: isTest];
+            [controller SetPlacement:weakSelf->_plugin with: placements[placementId]];
             controller.frame = CGRectMake(0, height, 360, 160);
             [weakSelf->_placementContainer addSubview: controller];
             weakSelf->_controllers[placementId] = controller;
@@ -89,6 +93,13 @@
     [_plugin EnableAds: true];
     
     [_plugin.Events AddProgressionEventWithStatus:ProgressionStatusComplete type:ProgressionTypeAchievement source:ProgressionSourceUndefined];
+    
+    if (serial != nil) {
+        DebugServer *debugServer = [[DebugServer alloc] initWithIp: dmIp serial: serial];
+        NeftaPlugin.OnLog = ^(NSString *log) {
+            [debugServer sendWithType: @"log" message: log];
+        };
+    }
 }
 
 @end
