@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ySx7jlFn4yd0JITg3ZPzxASHsr8=
+		NiDI0F2ip971OsE4BDtcLVzYkbo=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nbjJI24Nckbhy7wkfQN0Nxvdc8E=
+		OpX+Kw6avzb8ntlEk2FVzvIc7Zk=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ySx7jlFn4yd0JITg3ZPzxASHsr8=
+		NiDI0F2ip971OsE4BDtcLVzYkbo=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aEk0yaUZWwcCKHMlsme4B2p3t4c=
+		ukcFvGY1lEFpUgxgXBZVVEyjcGA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		tjBsBKVB8JHsUrBHhVR2/t8xXQI=
+		xZfoS9DEwQadbalbP0rc92s5UaQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -96,7 +96,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ninfhG271xGhUJbq4SrkibrLtAHNFnMRlw2WNxNttkE=
+			SWNLF7CsPDmKcM9++68HrVzGO+aLivQkWIrBZy5Yb48=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -124,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZYPlehy/6AkT4yIpojKSLcvLgrG7elyqyXQkZVR5Ugk=
+			P0iw0NLZzfeuQMOn3TXqTOd1g/EatnrtcSjz3rYbZqQ=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ninfhG271xGhUJbq4SrkibrLtAHNFnMRlw2WNxNttkE=
+			SWNLF7CsPDmKcM9++68HrVzGO+aLivQkWIrBZy5Yb48=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -159,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JHHb6GamWxNUJ1Tfy4bTChwLng9H6v8dA6biy8BU2fI=
+			rNsmZTF75YW71NhwOJY+gGSq8ZGfbOMDofoyOL58moU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -173,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9yyp2P1HwrakJzhF6GSziZUGpbZr2arr4o+FHU4yz/U=
+			UIxSeqBIfyZSqRs0+GLXX9dWXx2d/1595yOpDZwyokA=
 			</data>
 		</dict>
 	</dict>
