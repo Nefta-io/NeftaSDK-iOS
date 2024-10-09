@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		r8ZKh+PreR413u4wsGzvIEL6+QQ=
+		s9AbivDwSNQuEof6jVYNbkanp40=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2qUoqoA8R6/4LJiyRxY9b71naRc=
+		5CzzFbPlUVNFmIb80uGPr4PCKvU=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		r8ZKh+PreR413u4wsGzvIEL6+QQ=
+		s9AbivDwSNQuEof6jVYNbkanp40=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		r6IMvTEKfuUMG4F2AnybhmpIyg8=
+		GsLFtOJWHUGDbjEKUGxvf3KMUo0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		tjBsBKVB8JHsUrBHhVR2/t8xXQI=
+		BepfRY/zR8NE6rJwAGUwTgO5KiY=
 		</data>
 		<key>mraid.js</key>
 		<data>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Uqps3Wvq09t2FcyI83psSufbe0+Q+yKp8K6z//LzLU=
+			YXnzd0gDP71NiaTjxB6cHZvsh75+nfV7BBB9H/aqKys=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -128,14 +128,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V0UQwirdRn7ybKxQ3J+yefTuTkgqQCMDXaHT1ccKnhg=
+			pePE3s9VIdI9uPmhBCUAEDVSRRPjcwtG8P9VVuK9+H4=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Uqps3Wvq09t2FcyI83psSufbe0+Q+yKp8K6z//LzLU=
+			YXnzd0gDP71NiaTjxB6cHZvsh75+nfV7BBB9H/aqKys=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FcWjkOMqXaWGHv7I5zcwcsCTwteRxgreLC9oSo7V7Vg=
+			bs/c/6L9rRn88sjFJcjDiBiUjXEnvicMkhwTzWjGzNY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -177,7 +177,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9yyp2P1HwrakJzhF6GSziZUGpbZr2arr4o+FHU4yz/U=
+			fnJpZFqIvDi72jV8GS9j5QWpZ88ngXPmcVsQPql33Tk=
 			</data>
 		</dict>
 		<key>mraid.js</key>

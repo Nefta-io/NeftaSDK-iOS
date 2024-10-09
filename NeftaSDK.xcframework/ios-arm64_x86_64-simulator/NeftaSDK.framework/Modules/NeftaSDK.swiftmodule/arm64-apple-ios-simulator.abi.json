@@ -37068,8 +37068,8 @@
           },
           {
             "kind": "Function",
-            "name": "ParseBidResponse",
-            "printedName": "ParseBidResponse(response:placement:responseCode:)",
+            "name": "OnCustomLoad",
+            "printedName": "OnCustomLoad(response:placement:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -37087,17 +37087,11 @@
                 "name": "Placement",
                 "printedName": "NeftaSDK.Placement",
                 "usr": "c:@M@NeftaSDK@objc(cs)Placement"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8NeftaSDK6BidderC16ParseBidResponse8response9placement0G4Codey10Foundation4DataV_AA9PlacementCSitF",
-            "mangledName": "$s8NeftaSDK6BidderC16ParseBidResponse8response9placement0G4Codey10Foundation4DataV_AA9PlacementCSitF",
+            "usr": "s:8NeftaSDK6BidderC12OnCustomLoad8response9placementy10Foundation4DataV_AA9PlacementCtF",
+            "mangledName": "$s8NeftaSDK6BidderC12OnCustomLoad8response9placementy10Foundation4DataV_AA9PlacementCtF",
             "moduleName": "NeftaSDK",
             "isOpen": true,
             "funcSelfKind": "NonMutating"
@@ -41393,7 +41387,7 @@
       "kind": "StringLiteral",
       "offset": 2876,
       "length": 7,
-      "value": "\"3.5.0\""
+      "value": "\"3.5.1\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaSDK\/NeftaSDK\/NeftaPlugin.swift",
