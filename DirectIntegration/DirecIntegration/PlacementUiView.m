@@ -7,124 +7,69 @@
 
 #import <Foundation/Foundation.h>
 #import "PlacementUiView.h"
+#import "BannerController.h"
+#import "InterstitialController.h"
+#import "RewardedController.h"
+
+#import "ViewController.h"
 
 @implementation PlacementUiView
 
--(void)SetPlacement:(NeftaPlugin *) plugin with: (Placement *) placement {
-    _plugin = plugin;
+-(void)Init:(Placement *) placement {
     _placement = placement;
-    
+    _adUnits = [[NSMutableArray alloc] init];
+
     NSString *name;
-    Boolean isBanner = false;
     if (placement._type == TypesBanner) {
         name = [NSString stringWithFormat:@"Banner(%@)", placement._id];
-        isBanner = true;
     } else if (placement._type == TypesInterstitial) {
         name = [NSString stringWithFormat:@"Interstitial(%@)", placement._id];
-    } else if (placement._type == TypesRewardedVideo) {
+    } else {
         name = [NSString stringWithFormat:@"Rewarded(%@)", placement._id];
     }
     [_nameLabel setText: name];
     
-    [_enableBannerSwitch setHidden: !isBanner];
-    [_enableBannerLabel setHidden: !isBanner];
-    
-    [_enableBannerSwitch addTarget:self action:@selector(OnEnableBannerSwitch:) forControlEvents:UIControlEventValueChanged];
-    [_bidButton addTarget:self action:@selector(OnBidClick:) forControlEvents:UIControlEventTouchUpInside];
-    [_loadButton addTarget:self action:@selector(OnLoadClick:) forControlEvents:UIControlEventTouchUpInside];
-    [_showButton addTarget:self action:@selector(OnShowClick:) forControlEvents:UIControlEventTouchUpInside];
-    [_closeButton addTarget:self action:@selector(OnCloseClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self SyncUi];
+    [_createButton addTarget:self action:@selector(OnCreateClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (IBAction)OnEnableBannerSwitch:(UISwitch *)sender {
-    [_plugin EnableBannerWithId: _placement._id enable:  sender.isOn];
-    
-    [self SyncUi];
-}
-
-- (IBAction)OnBidClick:(id)sender {
-    [_plugin BidWithId: _placement._id];
-
-    [self SyncUi];
-}
-
-- (IBAction)OnLoadClick:(id)sender {
-    [_plugin LoadWithId: _placement._id];
-}
-
-- (IBAction)OnShowClick:(id)sender {
-    [_plugin ShowWithId: _placement._id];
-}
-
-- (IBAction)OnCloseClick:(id)sender {
-    [_plugin CloseWithId: _placement._id];
-}
-
-- (void)OnBid:(BidResponse *)bidResponse {
-    [self SyncUi];
-}
-
-- (void)OnLoadStart {
-    [self SyncUi];
-}
-
-- (void)OnLoadFail:(NSString *)error {
-    [self SyncUi];
-}
-
-- (void)OnLoad:(NSInteger)width height:(NSInteger)height {
-    [self SyncUi];
-}
-
-- (void)OnShow {
-    [self SyncUi];
-}
-
-- (void)OnClose {
-    [self SyncUi];
-}
-
-- (void)SyncUi {
-    NSString *bid;
-    if (_placement._availableBid == nil) {
-        bid = @"Available bid:";
-    } else {
-        bid = [NSString stringWithFormat: @"Available bid: %@ (%f)", _placement._availableBid._id, _placement._availableBid._price];
+-(int)Reposition:(CGRect) rect {
+    rect.size.height = 40 + [_adUnits count] * 130;
+    self.frame = rect;
+    _adUnitContainer.frame = CGRectMake(0, 35, 360, [_adUnits count] * 130);
+    for (int i = 0; i < [_adUnits count]; i++) {
+        ((UIView *)_adUnits[i]).frame = CGRectMake(0, i * 100, 360, 130);
     }
-    [_availableBidLabel setText:bid];
- 
-    if (_placement.IsBidding) {
-        [_bidButton setEnabled: false];
-        [_bidButton setTitle: @"Bidding" forState: UIControlStateDisabled];
+    return rect.size.height;
+}
+
+- (IBAction)OnCreateClick:(id)sender {
+    AdUnitController *adUnit = nil;
+    if (_placement._type == TypesBanner) {
+        adUnit = [[NSBundle mainBundle] loadNibNamed:@"BannerController" owner:nil options:nil][0];
+        [adUnit Init: _placement callback: self];
+    } else if (_placement._type == TypesInterstitial) {
+        adUnit = [[NSBundle mainBundle] loadNibNamed:@"InterstitialController" owner:nil options:nil][0];
+        [adUnit Init: _placement callback: self];
     } else {
-        [_bidButton setEnabled: true];
-        [_bidButton setTitle: @"Bid" forState: UIControlStateNormal];
-    }
-  
-    if (_placement.CanLoad) {
-        [_loadButton setEnabled: true ];
-        [_loadButton setTitle: @"Load" forState: UIControlStateNormal];
-    } else {
-        [_loadButton setEnabled: false ];
-        [_loadButton setTitle: _placement.IsLoading ? @"Loading" : @"Load" forState: UIControlStateDisabled];
+        adUnit = [[NSBundle mainBundle] loadNibNamed:@"RewardedController" owner:nil options:nil][0];
+        [adUnit Init: _placement callback: self];
     }
     
-    if (_placement._bufferBid == nil) {
-        bid = @"Buffered bid:";
-    } else {
-        bid = [NSString stringWithFormat: @"Buffered bid: %@", _placement._bufferBid._id];
+    [_adUnits addObject: adUnit];
+    [_adUnitContainer addSubview: adUnit];
+
+    [ViewController Reposition];
+}
+
+-(void)OnAdUnitClose:(AdUnitController * _Nonnull)adUnit {
+    for (int i = 0; i < [_adUnits count]; i++) {
+        if (_adUnits[i] == adUnit) {
+            [_adUnits removeObjectAtIndex: i];
+            break;
+        }
     }
-    [_bufferedBidLabel setText:bid];
-    [_showButton setEnabled: [_placement CanShow ] ];
+    [adUnit removeFromSuperview];
     
-    if (_placement._renderedBid == nil) {
-        bid = @"Rendered bid:";
-    } else {
-        bid = [NSString stringWithFormat: @"Rendered bid: %@", _placement._renderedBid._id];
-    }
-    [_renderedBidLabel setText:bid];
-    [_closeButton setEnabled: _placement._renderedBid != nil];
+    [ViewController Reposition];
 }
 @end

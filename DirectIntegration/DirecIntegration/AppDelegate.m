@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NeftaSDK/NeftaSDK-Swift.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
 }
-
 
 #pragma mark - UISceneSession lifecycle
 
@@ -33,6 +33,5 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
  
 }
-
 
 @end

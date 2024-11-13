@@ -13,6 +13,7 @@
 @interface ViewController : UIViewController <MFMailComposeViewControllerDelegate>
 @property NeftaPlugin *plugin;
 @property NSString *appId;
+@property (weak, nonatomic) IBOutlet UIView *bannerPlaceholder;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *placementsScroll;
 @property (weak, nonatomic) IBOutlet UIView *placementContainer;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *appIdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nuidLabel;
 
-@property NSMutableDictionary* controllers;
++(UIView *) GetBannerPlaceholder;
++(void) Reposition;
 @end
 

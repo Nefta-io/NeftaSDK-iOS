@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		9082B7652B0F3CCE00C13443 /* NeftaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */; };
 		9082B7662B0F3CCE00C13443 /* NeftaSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9086F3C42CE4966E00643BC1 /* RewardedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9086F3C32CE4966E00643BC1 /* RewardedController.xib */; };
+		9086F3C52CE4966E00643BC1 /* InterstitialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9086F3C02CE4966E00643BC1 /* InterstitialController.xib */; };
+		9086F3C62CE4966E00643BC1 /* BannerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9086F3BC2CE4966E00643BC1 /* BannerController.xib */; };
+		9086F3C72CE4966E00643BC1 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3BB2CE4966E00643BC1 /* BannerController.m */; };
+		9086F3C82CE4966E00643BC1 /* AdUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3B92CE4966E00643BC1 /* AdUnitController.m */; };
+		9086F3C92CE4966E00643BC1 /* InterstitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3BF2CE4966E00643BC1 /* InterstitialController.m */; };
+		9086F3CA2CE4966E00643BC1 /* RewardedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3C22CE4966E00643BC1 /* RewardedController.m */; };
+		9086F3CD2CE496CC00643BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3CC2CE496CC00643BC1 /* AppDelegate.m */; };
+		9086F3D02CE4971A00643BC1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9086F3CF2CE4971A00643BC1 /* SceneDelegate.m */; };
 		90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E92D302AB894F500B7E68C /* PlacementUiView.m */; };
 		90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E92D352AB8B21500B7E68C /* PlacementUiView.xib */; };
-		90F45C982AB1A5F2003A741F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C972AB1A5F2003A741F /* AppDelegate.m */; };
-		90F45C9B2AB1A5F2003A741F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C9A2AB1A5F2003A741F /* SceneDelegate.m */; };
 		90F45C9E2AB1A5F2003A741F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C9D2AB1A5F2003A741F /* ViewController.m */; };
 		90F45CA12AB1A5F2003A741F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F45C9F2AB1A5F2003A741F /* Main.storyboard */; };
 		90F45CA32AB1A5F2003A741F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F45CA22AB1A5F2003A741F /* Assets.xcassets */; };
@@ -37,14 +44,26 @@
 
 /* Begin PBXFileReference section */
 		9082B7642B0F3CCE00C13443 /* NeftaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NeftaSDK.xcframework; path = ../NeftaSDK.xcframework; sourceTree = "<group>"; };
+		9086F3B82CE4966E00643BC1 /* AdUnitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdUnitController.h; sourceTree = "<group>"; };
+		9086F3B92CE4966E00643BC1 /* AdUnitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdUnitController.m; sourceTree = "<group>"; };
+		9086F3BA2CE4966E00643BC1 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
+		9086F3BB2CE4966E00643BC1 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
+		9086F3BC2CE4966E00643BC1 /* BannerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerController.xib; sourceTree = "<group>"; };
+		9086F3BD2CE4966E00643BC1 /* IAdUnitCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdUnitCallback.h; sourceTree = "<group>"; };
+		9086F3BE2CE4966E00643BC1 /* InterstitialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialController.h; sourceTree = "<group>"; };
+		9086F3BF2CE4966E00643BC1 /* InterstitialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialController.m; sourceTree = "<group>"; };
+		9086F3C02CE4966E00643BC1 /* InterstitialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterstitialController.xib; sourceTree = "<group>"; };
+		9086F3C12CE4966E00643BC1 /* RewardedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedController.h; sourceTree = "<group>"; };
+		9086F3C22CE4966E00643BC1 /* RewardedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedController.m; sourceTree = "<group>"; };
+		9086F3C32CE4966E00643BC1 /* RewardedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedController.xib; sourceTree = "<group>"; };
+		9086F3CB2CE496CC00643BC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9086F3CC2CE496CC00643BC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9086F3CE2CE4971A00643BC1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9086F3CF2CE4971A00643BC1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
 		90E92D322AB8988100B7E68C /* PlacementUiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementUiView.h; sourceTree = "<group>"; };
 		90E92D352AB8B21500B7E68C /* PlacementUiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacementUiView.xib; sourceTree = "<group>"; };
 		90F45C932AB1A5F2003A741F /* DirectIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90F45C962AB1A5F2003A741F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		90F45C972AB1A5F2003A741F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		90F45C992AB1A5F2003A741F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		90F45C9A2AB1A5F2003A741F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		90F45C9C2AB1A5F2003A741F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		90F45C9D2AB1A5F2003A741F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		90F45CA02AB1A5F2003A741F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,12 +115,24 @@
 		90F45C952AB1A5F2003A741F /* DirecIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				9086F3CE2CE4971A00643BC1 /* SceneDelegate.h */,
+				9086F3CF2CE4971A00643BC1 /* SceneDelegate.m */,
+				9086F3CB2CE496CC00643BC1 /* AppDelegate.h */,
+				9086F3CC2CE496CC00643BC1 /* AppDelegate.m */,
+				9086F3B82CE4966E00643BC1 /* AdUnitController.h */,
+				9086F3B92CE4966E00643BC1 /* AdUnitController.m */,
+				9086F3BA2CE4966E00643BC1 /* BannerController.h */,
+				9086F3BB2CE4966E00643BC1 /* BannerController.m */,
+				9086F3BC2CE4966E00643BC1 /* BannerController.xib */,
+				9086F3BD2CE4966E00643BC1 /* IAdUnitCallback.h */,
+				9086F3BE2CE4966E00643BC1 /* InterstitialController.h */,
+				9086F3BF2CE4966E00643BC1 /* InterstitialController.m */,
+				9086F3C02CE4966E00643BC1 /* InterstitialController.xib */,
+				9086F3C12CE4966E00643BC1 /* RewardedController.h */,
+				9086F3C22CE4966E00643BC1 /* RewardedController.m */,
+				9086F3C32CE4966E00643BC1 /* RewardedController.xib */,
 				90FA456B2C7C504900B43677 /* DirectIntegration-Bridging-Header.h */,
 				90FA45672C7C4E2200B43677 /* DebugServer.swift */,
-				90F45C962AB1A5F2003A741F /* AppDelegate.h */,
-				90F45C972AB1A5F2003A741F /* AppDelegate.m */,
-				90F45C992AB1A5F2003A741F /* SceneDelegate.h */,
-				90F45C9A2AB1A5F2003A741F /* SceneDelegate.m */,
 				90F45C9C2AB1A5F2003A741F /* ViewController.h */,
 				90F45C9D2AB1A5F2003A741F /* ViewController.m */,
 				90E92D322AB8988100B7E68C /* PlacementUiView.h */,
@@ -178,6 +209,9 @@
 				90F45CA62AB1A5F2003A741F /* LaunchScreen.storyboard in Resources */,
 				90F45CA32AB1A5F2003A741F /* Assets.xcassets in Resources */,
 				90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */,
+				9086F3C42CE4966E00643BC1 /* RewardedController.xib in Resources */,
+				9086F3C52CE4966E00643BC1 /* InterstitialController.xib in Resources */,
+				9086F3C62CE4966E00643BC1 /* BannerController.xib in Resources */,
 				90F45CA12AB1A5F2003A741F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,11 +224,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F45C9E2AB1A5F2003A741F /* ViewController.m in Sources */,
-				90F45C982AB1A5F2003A741F /* AppDelegate.m in Sources */,
+				9086F3C72CE4966E00643BC1 /* BannerController.m in Sources */,
+				9086F3CD2CE496CC00643BC1 /* AppDelegate.m in Sources */,
+				9086F3C82CE4966E00643BC1 /* AdUnitController.m in Sources */,
+				9086F3C92CE4966E00643BC1 /* InterstitialController.m in Sources */,
+				9086F3CA2CE4966E00643BC1 /* RewardedController.m in Sources */,
 				90FA45682C7C4E2200B43677 /* DebugServer.swift in Sources */,
+				9086F3D02CE4971A00643BC1 /* SceneDelegate.m in Sources */,
 				90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */,
 				90F45CA92AB1A5F2003A741F /* main.m in Sources */,
-				90F45C9B2AB1A5F2003A741F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2LJ985962L;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -353,7 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nefta.TestbedIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -375,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2LJ985962L;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -389,7 +427,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nefta.TestbedIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -8,28 +8,20 @@
 #import <UIKit/UIKit.h>
 #import <NeftaSDK/NeftaSDK-Swift.h>
 
-@interface PlacementUiView : UIView
+#import "IAdUnitCallback.h"
+#import "AdUnitController.h"
+
+@interface PlacementUiView : UIView<IAdUnitCallback>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *bidButton;
-@property (weak, nonatomic) IBOutlet UISwitch *enableBannerSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *enableBannerLabel;
-@property (weak, nonatomic) IBOutlet UILabel *availableBidLabel;
-@property (weak, nonatomic) IBOutlet UIButton *loadButton;
-@property (weak, nonatomic) IBOutlet UILabel *bufferedBidLabel;
-@property (weak, nonatomic) IBOutlet UIButton *showButton;
-@property (weak, nonatomic) IBOutlet UILabel *renderedBidLabel;
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIButton *createButton;
+@property (weak) IBOutlet UIStackView *adUnitContainer;
 
-@property NeftaPlugin *plugin;
-@property Placement *placement;
+@property Placement * _Nonnull placement;
+@property NSMutableArray* _Nonnull adUnits;
 
--(void)SetPlacement:(NeftaPlugin *) plugin with:(Placement *) placement;
--(void)OnBid:(BidResponse *)bidResponse;
--(void)OnLoadStart;
--(void)OnLoadFail:(NSString *)error;
--(void)OnLoad:(NSInteger)width height:(NSInteger)height;
--(void)OnShow;
--(void)OnClose;
+-(void)Init:(Placement * _Nonnull)placement;
 
--(void)SyncUi;
+-(int)Reposition:(CGRect) rect;
+-(void)OnAdUnitClose:(AdUnitController * _Nonnull)adUnit;
+
 @end
