@@ -294,7 +294,15 @@ import UIKit
                         let revenue = Float64(segments[10])!
                         let precision = segments[11]
                         let status = Int(segments[12])!
-                        NeftaPlugin.OnExternalMediationRequest(provider, adType: type, recommendedAdUnitId: recommendedAdUnitId, requestedFloorPrice: requestedFloor, calculatedFloorPrice: calculatedFloor, adUnitId: adUnitId, revenue: revenue, precision: precision, status: status)
+                        var providerStatus: String? = nil
+                        if segments.count > 13 {
+                            providerStatus = segments[13]
+                        }
+                        var networkStatus: String? = nil
+                        if segments.count > 14 {
+                            networkStatus = segments[14]
+                        }
+                        NeftaPlugin.OnExternalMediationRequest(provider, adType: type, recommendedAdUnitId: recommendedAdUnitId, requestedFloorPrice: requestedFloor, calculatedFloorPrice: calculatedFloor, adUnitId: adUnitId, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus)
                         self.SendUdp(connection: connection, to: sourceName, message: "return|add_ad_load")
                     }
                 case "get_insights":
