@@ -59,15 +59,15 @@ static DebugServer *debugServer;
         }
         [ViewController Reposition];
     };
-    _plugin.OnBehaviourInsight = ^(NSDictionary<NSString *, Insight *> * behaviourInsight) {
+    
+    NSArray *insightList = @[@"calculated_user_floor_price_banner", @"calculated_user_floor_price_interstitial", @"calculated_user_floor_price_rewarded"];
+    [weakSelf->_plugin GetBehaviourInsight: insightList callback: ^(NSDictionary<NSString *, Insight *> * behaviourInsight) {
+        NSLog(@"Behavour insights: %lu", behaviourInsight.count);
         for (NSString *key in behaviourInsight) {
             Insight* insight = behaviourInsight[key];
             NSLog(@"Behavour insight %@: i:%lld f:%f s:%@", key, insight._int, insight._float, insight._string);
         }
-    };
-    
-    NSArray *insightList = @[@"calculated_user_floor_price_banner", @"calculated_user_floor_price_interstitial", @"calculated_user_floor_price_rewarded"];
-    [weakSelf->_plugin GetBehaviourInsight: insightList];
+    }];
     
     debugServer = [[DebugServer alloc] initWithViewController: self];
     
