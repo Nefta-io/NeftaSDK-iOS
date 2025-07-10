@@ -24,34 +24,9 @@
 }
 
 - (IBAction)OnBidClick:(id)sender {
-    NSString *name = @"example event";
-    NSInteger randomValue = arc4random_uniform(101);
-    if (_ad._placement._type == TypesBanner) {
-        NSArray *insightList = @[@"calculated_user_floor_price_banner", @"calculated_user_floor_price_interstitial", @"calculated_user_floor_price_rewarded"];
-        [NeftaPlugin._instance GetBehaviourInsight: insightList];
-        
-        ProgressionStatus progressionStatus = (ProgressionStatus) arc4random_uniform(3);
-        ProgressionType progressionType = (ProgressionType) arc4random_uniform(7);
-        ProgressionSource progressionSource = (ProgressionSource) arc4random_uniform(7);
-        [NeftaPlugin._instance.Events AddProgressionEventWithStatus: progressionStatus type:progressionType source: progressionSource name: name value: randomValue];
-    } else if (_ad._placement._type == TypesInterstitial) {
-        [NeftaPlugin._instance GetBehaviourInsight: @[@"calculated_user_floor_price_interstitial"] callback: ^(NSDictionary<NSString *, Insight *> * behaviourInsight) {
-            NSLog(@"Interstitial insight %f", behaviourInsight[@"calculated_user_floor_price_interstitial"]._float);
-        }];
-        
-        ResourceCategory rCategory = (ResourceCategory) arc4random_uniform(9);
-        ReceiveMethod rMethod = (ReceiveMethod) arc4random_uniform(8);
-        [NeftaPlugin._instance.Events AddReceiveEventWithCategory: rCategory method: rMethod name: name quantity: randomValue];
-    } else {
-        [NeftaPlugin._instance GetBehaviourInsight: @[@"calculated_user_floor_price_rewarded"] callback: ^(NSDictionary<NSString *, Insight *> * behaviourInsight) {
-            NSLog(@"Rewarded insight %f", behaviourInsight[@"calculated_user_floor_price_rewarded"]._float);
-        }];
-        
-        ResourceCategory rCategory = (ResourceCategory) arc4random_uniform(9);
-        SpendMethod rMethod = (SpendMethod) arc4random_uniform(8);
-        [NeftaPlugin._instance.Events AddSpendEventWithCategory: rCategory method: rMethod name: name quantity: randomValue];
-    }
     [_ad Bid];
+    
+    [self AddDemoIntegrationExampleEvent];
 }
 
 - (IBAction)OnLoadClick:(id)sender {
@@ -90,6 +65,8 @@
 }
 - (void)OnLoadWithAd:(NAd * _Nonnull)ad width:(NSInteger)width height:(NSInteger)height {
     [_statusLabel setText: @"OnLoad success"];
+    
+    [NeftaPlugin OnExternalMediationRequest: @"internal-test" adType: _ad._type recommendedAdUnitId: [@"recomA" stringByAppendingString:_ad._bid._id] requestedFloorPrice: 0.2 calculatedFloorPrice: 0.3 adUnitId: @"seleA" revenue: 0.2 precision: @"prec" status: 1 providerStatus: nil networkStatus: nil];
 }
 - (void)OnShowFailWithAd:(NAd * _Nonnull)ad error:(NError * _Nonnull)error {
     [_creativeIdLabel setText: @""];
@@ -97,10 +74,48 @@
 }
 - (void)OnShowWithAd:(NAd * _Nonnull)ad {
     [_statusLabel setText: @"OnShow"];
+    
+    [NeftaPlugin OnExternalMediationImpression: @"internal-test" data: [NSMutableDictionary dictionary] adType: ad._type revenue: 0.69 precision: @"pre"];
 }
 - (void)OnCloseWithAd:(NAd * _Nonnull)ad {
     _ad = nil;
 
     [_callback OnAdUnitClose: self];
+}
+
+-(void)AddDemoIntegrationExampleEvent {
+    NSString *name = @"example event";
+    NSInteger randomValue = arc4random_uniform(101);
+    if (_ad._placement._type == TypesBanner) {        
+        ProgressionStatus progressionStatus = (ProgressionStatus) arc4random_uniform(3);
+        ProgressionType progressionType = (ProgressionType) arc4random_uniform(7);
+        ProgressionSource progressionSource = (ProgressionSource) arc4random_uniform(7);
+        [NeftaPlugin._instance.Events AddProgressionEventWithStatus: progressionStatus type:progressionType source: progressionSource name: name value: randomValue];
+    } else if (_ad._placement._type == TypesInterstitial) {
+        [NeftaPlugin._instance GetInsights: Insights.Interstitial callback: ^(Insights* insights) {
+            if (insights._interstitial != nil) {
+                NSLog(@"Interstitial insight %f", insights._interstitial._floorPrice);
+            }
+        } timeout: 5];
+        
+        ResourceCategory rCategory = (ResourceCategory) arc4random_uniform(9);
+        ReceiveMethod rMethod = (ReceiveMethod) arc4random_uniform(8);
+        [NeftaPlugin._instance.Events AddReceiveEventWithCategory: rCategory method: rMethod name: name quantity: randomValue];
+    } else {
+        [NeftaPlugin._instance GetInsights: Insights.Rewarded callback: ^(Insights* insights) {
+            if (insights._rewarded != nil) {
+                NSLog(@"Rewarded insight %f", insights._rewarded._floorPrice);
+            }
+        } timeout: 5];
+        
+        ResourceCategory rCategory = (ResourceCategory) arc4random_uniform(9);
+        SpendMethod rMethod = (SpendMethod) arc4random_uniform(8);
+        [NeftaPlugin._instance.Events AddSpendEventWithCategory: rCategory method: rMethod name: name quantity: randomValue];
+        
+        [NeftaPlugin._instance.Events AddSpendEventWithCategory: ResourceCategorySoftCurrency
+                                                         method: SpendMethodOther
+                                                           name: @"coins"
+                                                         quantity: 5];
+    }
 }
 @end

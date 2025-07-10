@@ -35,13 +35,7 @@ static DebugServer *debugServer;
     [_appIdLabel setText: [NSString stringWithFormat: @"AppId: %@", _appId]];
     
     [NeftaPlugin EnableLogging: true];
-    NSArray *arguments = [[NSProcessInfo processInfo] arguments];
-    if ([arguments count] > 1) {
-        NSString *overrideUrl = arguments[1];
-        if (overrideUrl != nil && overrideUrl.length > 2) {
-            [NeftaPlugin SetOverrideWithUrl: overrideUrl];
-        }
-    }
+    debugServer = [[DebugServer alloc] initWithViewController: self];
     
     _plugin = [NeftaPlugin InitWithAppId: _appId];
     [_plugin SetContentRatingWithRating: NeftaPlugin.ContentRating_ParentalGuidance];
@@ -60,16 +54,15 @@ static DebugServer *debugServer;
         [ViewController Reposition];
     };
     
-    NSArray *insightList = @[@"calculated_user_floor_price_banner", @"calculated_user_floor_price_interstitial", @"calculated_user_floor_price_rewarded"];
-    [weakSelf->_plugin GetBehaviourInsight: insightList callback: ^(NSDictionary<NSString *, Insight *> * behaviourInsight) {
-        NSLog(@"Behavour insights: %lu", behaviourInsight.count);
-        for (NSString *key in behaviourInsight) {
-            Insight* insight = behaviourInsight[key];
-            NSLog(@"Behavour insight %@: i:%lld f:%f s:%@", key, insight._int, insight._float, insight._string);
+    [weakSelf->_plugin GetInsights: Insights.Churn | Insights.Banner | Insights.Interstitial | Insights.Rewarded callback: ^(Insights * insights) {
+        NSLog(@"On GetInsights");
+        if (insights._churn != nil) {
+            NSLog(@"D1 churn %f", insights._churn._d1_probability);
         }
-    }];
-    
-    debugServer = [[DebugServer alloc] initWithViewController: self];
+        if (insights._interstitial != nil) {
+            NSLog(@"Recommended interstitial %@: %f", insights._interstitial._adUnit, insights._interstitial._floorPrice);
+        }
+    } timeout: 5];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (@available(iOS 14.5, *)) {

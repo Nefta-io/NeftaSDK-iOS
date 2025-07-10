@@ -28,8 +28,20 @@ import UIKit
         super.init()
 
         _name = UIDevice.current.model
-        _version = "\(NeftaPlugin._instance._info._bundleVersion).\(Bundle.main.infoDictionary!["CFBundleVersion"]!)"
+        _version = "0.0.0"
+        if let bundleInfo = Bundle.main.infoDictionary {
+            _version = "\(bundleInfo["CFBundleShortVersionString"]!).\(bundleInfo["CFBundleVersion"]!)"
+        }
         
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.count > 1 {
+            let overrideUrl = arguments[1]
+            if  overrideUrl.count > 2 {
+                NeftaPlugin.SetOverride(url: "\(overrideUrl)/sdk/init")
+            }
+        }
+        
+        NeftaPlugin.SetDebugTime(offset: 0)
         NeftaPlugin.OnLog = { log in
             self._logLines.append(log)
         }
@@ -258,6 +270,8 @@ import UIKit
                                 customPayload = segments[9]
                             }
                             NeftaPlugin._instance.Events.AddSpendEvent(category: category, method: method, name: name, quantity: value, customPayload: customPayload)
+                            
+                            NeftaPlugin._instance.Events.AddSpendEvent(category: NeftaEvents.ResourceCategory.SoftCurrency, method: NeftaEvents.SpendMethod.Other, name: "coins", quantity: 5)
                         } else if segments[4] == "revenue" {
                             name = segments[5]
                             let price = Decimal(string: segments[6])!
@@ -280,7 +294,17 @@ import UIKit
                         if segments.count > 9 {
                             customPayload = segments[9]
                         }
-                        NeftaPlugin._instance.Record(type: type, category: category, subCategory: subCategory, name: name, value: value, customPayload: customPayload)
+                        var repeatCount: Int64 = 1
+                        if segments.count > 10 {
+                            repeatCount = Int64(segments[10])!
+                        }
+                        
+                        for _ in 0..<repeatCount {
+                            DispatchQueue.global(qos: .background).async {
+                                NeftaPlugin._instance.Record(type: type, category: category, subCategory: subCategory, name: name, value: value, customPayload: customPayload)
+                            }
+                        }
+                        
                         self.SendUdp(connection: connection, to: sourceName, message: "return|add_unity_event")
                     }
                 case "add_external_mediation_request":
@@ -303,24 +327,26 @@ import UIKit
                             networkStatus = segments[14]
                         }
                         NeftaPlugin.OnExternalMediationRequest(provider, adType: type, recommendedAdUnitId: recommendedAdUnitId, requestedFloorPrice: requestedFloor, calculatedFloorPrice: calculatedFloor, adUnitId: adUnitId, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus)
-                        self.SendUdp(connection: connection, to: sourceName, message: "return|add_ad_load")
+                        self.SendUdp(connection: connection, to: sourceName, message: "return|add_external_mediation_request")
+                    }
+                case "add_external_mediation_impression":
+                    do {
+                        let path = segments[4]
+                        let adType = Int(segments[5])!
+                        let revenue = Float64(segments[6])!
+                        let precision = segments[7]
+                        NeftaPlugin.OnExternalMediationImpression(path, data: NSMutableDictionary(), adType: adType, revenue: revenue, precision: precision)
+                        self.SendUdp(connection: connection, to: sourceName, message: "return|add_external_mediation_impression")
                     }
                 case "get_insights":
-                    let insights = segments[4]
+                    let insights = Int(segments[4])!
+                    let callbackIndex = Int(segments[5])!
                     
-                    let insightList = insights.split(separator: ",").map { String($0) }
+                    NeftaPlugin._instance.GetInsights(insights, callback: { insights in
+                        self.ForwardInsights(index: callbackIndex, insights: insights)
+                    }, timeout: 5)
                     
-                    if segments.count > 5 {
-                        let callbackIndex = Int(segments[5])!
-                        
-                        NeftaPlugin._instance.GetBehaviourInsight(insightList, callback: { insights in
-                            self.ForwardInsights(index: callbackIndex, insights: insights)
-                        })
-                    } else {
-                        NeftaPlugin._instance.GetBehaviourInsight(insightList)
-                    }
-                    
-                    self.SendUdp(connection: connection, to: sourceName, message: "return|get_insights")
+                    self.SendUdp(connection: connection, to: sourceName, message: "return|get_insights|\(insights)")
                     break
                 case "set_override":
                     let app_id = segments[4]
@@ -377,55 +403,78 @@ import UIKit
     }
     
     private func SendState(connection: NWConnection, to: String) {
+        var bundleId = ""
         var adUnits = [[String: Any]]()
-        if let placements = NeftaPlugin._instance!._placements {
-            for (id, placement) in placements {
-                var adUnit : [String: Any] = [
-                    "id": id,
-                    "type": placement._type.description
-                ]
-                
-                var ads = [[String: Any]]()
-                for ad in NeftaPlugin._instance._ads {
-                    var creativeId = ""
-                    if let bid = ad._bid, let crid = bid._creativeId {
-                        creativeId = crid
+        var payload: [String: Any] = [:]
+            //"rest_url": NeftaPlugin._rtbUrl,
+        //]
+        
+        if let NeftaInstance = NeftaPlugin._instance {
+            bundleId = NeftaInstance._info._bundleId
+            payload["app_id"] = NeftaInstance._info._appId!
+            payload["nuid"] = NeftaInstance._state._nuid
+            
+            if let placements = NeftaInstance._placements {
+                for (id, placement) in placements {
+                    var adUnit : [String: Any] = [
+                        "id": id,
+                        "type": placement._type.description
+                    ]
+                    
+                    var ads = [[String: Any]]()
+                    for ad in NeftaInstance._ads {
+                        var creativeId = ""
+                        if let bid = ad._bid, let crid = bid._creativeId {
+                            creativeId = crid
+                        }
+                        ads.append([
+                            "id": String(ad.hashValue),
+                            "crid": creativeId,
+                            "state": ad._state
+                        ])
                     }
-                    ads.append([
-                        "id": String(ad.hashValue),
-                        "crid": creativeId,
-                        "state": ad._state
-                    ])
+                    adUnit["ads"] = ads
+                    adUnits.append(adUnit)
                 }
-                adUnit["ads"] = ads
-                adUnits.append(adUnit)
             }
         }
-        let payload: [String: Any] = [
-            "app_id": NeftaPlugin._instance._info._appId!,
-            "rest_url": NeftaPlugin._rtbUrl,
-            "nuid": NeftaPlugin._instance._state._nuid,
-            "ad_units": adUnits
-        ]
+        payload["ad_units"] = adUnits
+        
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: payload, options: [])
-            SendUdp(connection: connection, to: to, message: "state|ios|\(NeftaPlugin._instance._info._bundleId)|\(self._version!)|\(_logLines.count)|\(String(data:jsonData, encoding: .utf8)!)")
+            SendUdp(connection: connection, to: to, message: "state|ios|\(bundleId)|\(self._version!)|\(_logLines.count)|\(String(data:jsonData, encoding: .utf8)!)")
         } catch _ as NSError {
             
         }
     }
     
-    private func ForwardInsights(index: Int, insights: [String: Insight]) {
+    private func ForwardInsights(index: Int, insights: Insights) {
         if let connection = self._broadcastConnection {
             var message = "return|insights|\(index)|{"
-            var isFirst = true
-            for (key, insight) in insights {
-                if (isFirst) {
-                    isFirst = false
-                } else {
+            var hasFields = false
+            if let churn = insights._churn {
+                message += "\"churn\":{"
+                message += "\"d1_probability\":\(churn._d1_probability)"
+                message += "}"
+                hasFields = true
+            }
+            if let banner = insights._banner {
+                if hasFields {
                     message += ","
                 }
-                message += "\"\(key)\":{\"f\":\(insight._float),\"i\":\(insight._int),\"s\":\"\(String(describing: insight._string))\"}"
+                message += "\"banner\":{\"ad_unit\":\"\(banner._adUnit!)\",\"floor_price\":\(banner._floorPrice)}"
+            }
+            if let interstitial = insights._interstitial {
+                if hasFields {
+                    message += ","
+                }
+                message += "\"interstitial\":{\"ad_unit\":\"\(interstitial._adUnit!)\",\"floor_price\":\(interstitial._floorPrice)}"
+            }
+            if let rewarded = insights._rewarded {
+                if hasFields {
+                    message += ","
+                }
+                message += "\"rewarded\":{\"ad_unit\":\"\(rewarded._adUnit!)\",\"floor_price\":\(rewarded._floorPrice)}"
             }
             message += "}"
             self.SendUdp(connection: connection, to: "master", message: message)
