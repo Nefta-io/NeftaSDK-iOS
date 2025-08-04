@@ -10,19 +10,13 @@
 		909048F92CCD758F00DCDF56 /* InterstitialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F72CCD758F00DCDF56 /* InterstitialController.xib */; };
 		909048FA2CCD758F00DCDF56 /* BannerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F62CCD758F00DCDF56 /* BannerController.xib */; };
 		909048FB2CCD758F00DCDF56 /* RewardedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F82CCD758F00DCDF56 /* RewardedController.xib */; };
-		909EF1CD2CD2C7910097DBE8 /* NeftaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909EF1CC2CD2C7910097DBE8 /* NeftaSDK.framework */; };
-		909EF1CE2CD2C7910097DBE8 /* NeftaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 909EF1CC2CD2C7910097DBE8 /* NeftaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9091AECA2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */; };
+		9091AECB2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90B066212C6B7B2B00C65A24 /* DebugServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066202C6B7B2B00C65A24 /* DebugServer.swift */; };
-		90B066232C6F135400C65A24 /* GameEventsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066222C6F135400C65A24 /* GameEventsTest.swift */; };
-		90B066252C6F13C100C65A24 /* BannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066242C6F13C100C65A24 /* BannerTests.swift */; };
-		90B066272C6F166200C65A24 /* InterstitialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066262C6F166200C65A24 /* InterstitialTests.swift */; };
-		90B066292C6F175E00C65A24 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066282C6F175E00C65A24 /* MiscTests.swift */; };
-		90B0662B2C6F179400C65A24 /* RewardedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0662A2C6F179400C65A24 /* RewardedTests.swift */; };
 		90B9D5372CAC5D5E004F0561 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5362CAC5D59004F0561 /* BannerController.m */; };
 		90B9D53A2CAC5EB7004F0561 /* AdUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5392CAC5EB5004F0561 /* AdUnitController.m */; };
 		90B9D53D2CAC639A004F0561 /* RewardedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D53C2CAC6398004F0561 /* RewardedController.m */; };
 		90B9D5402CAC63A4004F0561 /* InterstitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D53F2CAC63A2004F0561 /* InterstitialController.m */; };
-		90BDBC832BE371CF0023A023 /* TestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BDBC822BE371CF0023A023 /* TestUtility.swift */; };
 		90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92D1F2AB709E500B7E68C /* UIKit.framework */; };
 		90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E92D302AB894F500B7E68C /* PlacementUiView.m */; };
 		90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E92D352AB8B21500B7E68C /* PlacementUiView.xib */; };
@@ -46,13 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		900D79632BB694C2002AC761 /* Embed Frameworks */ = {
+		9091AECC2E40CA4D005AB6D8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				909EF1CE2CD2C7910097DBE8 /* NeftaSDK.framework in Embed Frameworks */,
+				9091AECB2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,13 +58,8 @@
 		909048F62CCD758F00DCDF56 /* BannerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerController.xib; sourceTree = "<group>"; };
 		909048F72CCD758F00DCDF56 /* InterstitialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterstitialController.xib; sourceTree = "<group>"; };
 		909048F82CCD758F00DCDF56 /* RewardedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedController.xib; sourceTree = "<group>"; };
-		909EF1CC2CD2C7910097DBE8 /* NeftaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NeftaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeftaSDK.xcframework; sourceTree = "<group>"; };
 		90B066202C6B7B2B00C65A24 /* DebugServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugServer.swift; sourceTree = "<group>"; };
-		90B066222C6F135400C65A24 /* GameEventsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEventsTest.swift; sourceTree = "<group>"; };
-		90B066242C6F13C100C65A24 /* BannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTests.swift; sourceTree = "<group>"; };
-		90B066262C6F166200C65A24 /* InterstitialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialTests.swift; sourceTree = "<group>"; };
-		90B066282C6F175E00C65A24 /* MiscTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
-		90B0662A2C6F179400C65A24 /* RewardedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedTests.swift; sourceTree = "<group>"; };
 		90B9D5352CAC5D2F004F0561 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
 		90B9D5362CAC5D59004F0561 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
 		90B9D5382CAC5E99004F0561 /* AdUnitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdUnitController.h; sourceTree = "<group>"; };
@@ -80,7 +69,6 @@
 		90B9D53E2CAC639D004F0561 /* InterstitialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialController.h; sourceTree = "<group>"; };
 		90B9D53F2CAC63A2004F0561 /* InterstitialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialController.m; sourceTree = "<group>"; };
 		90BDBC7E2BE371CE0023A023 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90BDBC822BE371CF0023A023 /* TestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtility.swift; sourceTree = "<group>"; };
 		90E92D1F2AB709E500B7E68C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
 		90E92D322AB8988100B7E68C /* PlacementUiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementUiView.h; sourceTree = "<group>"; };
@@ -112,31 +100,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				909EF1CD2CD2C7910097DBE8 /* NeftaSDK.framework in Frameworks */,
 				90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */,
+				9091AECA2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90BDBC7F2BE371CF0023A023 /* IntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				90BDBC822BE371CF0023A023 /* TestUtility.swift */,
-				90B066222C6F135400C65A24 /* GameEventsTest.swift */,
-				90B066242C6F13C100C65A24 /* BannerTests.swift */,
-				90B066262C6F166200C65A24 /* InterstitialTests.swift */,
-				90B066282C6F175E00C65A24 /* MiscTests.swift */,
-				90B0662A2C6F179400C65A24 /* RewardedTests.swift */,
-			);
-			path = IntegrationTests;
-			sourceTree = "<group>";
-		};
 		90E92D1E2AB709E400B7E68C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				909EF1CC2CD2C7910097DBE8 /* NeftaSDK.framework */,
+				9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */,
 				90E92D1F2AB709E500B7E68C /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -146,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				90F45C952AB1A5F2003A741F /* DirectIntegration */,
-				90BDBC7F2BE371CF0023A023 /* IntegrationTests */,
 				90F45C942AB1A5F2003A741F /* Products */,
 				90E92D1E2AB709E400B7E68C /* Frameworks */,
 			);
@@ -224,7 +198,7 @@
 				90F45C8F2AB1A5F2003A741F /* Sources */,
 				90F45C902AB1A5F2003A741F /* Frameworks */,
 				90F45C912AB1A5F2003A741F /* Resources */,
-				900D79632BB694C2002AC761 /* Embed Frameworks */,
+				9091AECC2E40CA4D005AB6D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,12 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B066232C6F135400C65A24 /* GameEventsTest.swift in Sources */,
-				90B0662B2C6F179400C65A24 /* RewardedTests.swift in Sources */,
-				90B066272C6F166200C65A24 /* InterstitialTests.swift in Sources */,
-				90B066292C6F175E00C65A24 /* MiscTests.swift in Sources */,
-				90B066252C6F13C100C65A24 /* BannerTests.swift in Sources */,
-				90BDBC832BE371CF0023A023 /* TestUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +330,6 @@
 		90BDBC862BE371CF0023A023 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 81;
@@ -388,7 +355,6 @@
 		90BDBC872BE371CF0023A023 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 66;
@@ -551,7 +517,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/swift,
 				);
-				MARKETING_VERSION = 4.3.0;
+				MARKETING_VERSION = 4.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nefta.direct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -601,7 +567,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/swift,
 				);
-				MARKETING_VERSION = 4.3.0;
+				MARKETING_VERSION = 4.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nefta.direct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

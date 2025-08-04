@@ -54,7 +54,7 @@ static DebugServer *debugServer;
         [ViewController Reposition];
     };
     
-    [weakSelf->_plugin GetInsights: Insights.Churn | Insights.Banner | Insights.Interstitial | Insights.Rewarded callback: ^(Insights * insights) {
+    [NeftaPlugin._instance GetInsights: Insights.Churn | Insights.Banner | Insights.Interstitial | Insights.Rewarded callback: ^(Insights * insights) {
         NSLog(@"On GetInsights");
         if (insights._churn != nil) {
             NSLog(@"D1 churn %f", insights._churn._d1_probability);
