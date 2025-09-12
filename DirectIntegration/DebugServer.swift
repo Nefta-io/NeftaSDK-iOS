@@ -69,12 +69,12 @@ import UIKit
         _broadcastConnection!.stateUpdateHandler = { state in
             switch state {
                 case .ready:
+                    self.SendState(connection: self._broadcastConnection!, to: "master")
                     print("DS:Broadcast started on: \(self._broadcastPort!): \(state)")
                     if let endpoint = self._broadcastConnection!.currentPath?.localEndpoint,
                        case let .hostPort(_, port) = endpoint {
                         self.StartListening(on: port)
                     }
-                    self.SendState(connection: self._broadcastConnection!, to: "master")
                 case .failed(let error):
                     print("DS:Broadcast failed on: \(error)")
                 default:
@@ -310,39 +310,36 @@ import UIKit
                 case "add_external_mediation_request":
                     do {
                         let provider = segments[4]
-                        let type = Int(segments[5])!
-                        let recommendedAdUnitId = segments[6]
-                        let requestedFloor = Float64(segments[7])!
-                        let calculatedFloor = Float64(segments[8])!
-                        let adUnitId = segments[9]
-                        let revenue = Float64(segments[10])!
-                        let precision = segments[11]
-                        let status = Int(segments[12])!
+                        let id1 = segments[5]
+                        let id2 = segments[6]
+                        let revenue = Float64(segments[8])!
+                        let precision = segments[9]
+                        let status = Int(segments[10])!
                         var providerStatus: String? = nil
-                        if segments.count > 13 {
-                            providerStatus = segments[13]
+                        if segments.count > 11 {
+                            providerStatus = segments[11]
                         }
                         var networkStatus: String? = nil
-                        if segments.count > 14 {
-                            networkStatus = segments[14]
+                        if segments.count > 12 {
+                            networkStatus = segments[12]
                         }
-                        NeftaPlugin.OnExternalMediationRequest(provider, adType: type, recommendedAdUnitId: recommendedAdUnitId, requestedFloorPrice: requestedFloor, calculatedFloorPrice: calculatedFloor, adUnitId: adUnitId, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus)
+                        NeftaPlugin.OnExternalMediationResponse(provider, id: id1, id2: id2, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus)
                         self.SendUdp(connection: connection, to: sourceName, message: "return|add_external_mediation_request")
                     }
                 case "add_external_mediation_impression":
                     do {
-                        let path = segments[4]
-                        let adType = Int(segments[5])!
-                        let revenue = Float64(segments[6])!
-                        let precision = segments[7]
-                        NeftaPlugin.OnExternalMediationImpression(path, data: NSMutableDictionary(), adType: adType, revenue: revenue, precision: precision)
+                        let isClick = Bool(segments[4])!
+                        let provider = segments[5]
+                        let id0 = segments[6]
+                        let id2 = segments[7]
+                        NeftaPlugin.OnExternalMediationImpression(isClick, provider: provider, data: nil, id: id0, id2: id2)
                         self.SendUdp(connection: connection, to: sourceName, message: "return|add_external_mediation_impression")
                     }
                 case "get_insights":
                     let insights = Int(segments[4])!
                     let callbackIndex = Int(segments[5])!
                     
-                    NeftaPlugin._instance.GetInsights(insights, callback: { insights in
+                    NeftaPlugin._instance.GetInsights(insights, previousInsight: nil, callback: { insights in
                         self.ForwardInsights(index: callbackIndex, insights: insights)
                     }, timeout: 5)
                     

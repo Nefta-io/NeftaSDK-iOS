@@ -26,27 +26,28 @@ static DebugServer *debugServer;
         return;
     }
     
+    debugServer = [[DebugServer alloc] initWithViewController: self];
+    
     BannerPlaceholder = _bannerPlaceholder;
     controllers = [[NSMutableArray alloc] init];
     placementsScroll = _placementsScroll;
     
     _appId = @"5661184053215232";
-    
     [_appIdLabel setText: [NSString stringWithFormat: @"AppId: %@", _appId]];
     
-    [NeftaPlugin EnableLogging: true];
-    debugServer = [[DebugServer alloc] initWithViewController: self];
+    [NeftaPlugin SetExtraParameterWithKey: NeftaPlugin.ExtParam_TestGroup value: @"split-direct"];
     
+    [NeftaPlugin EnableLogging: true];
     _plugin = [NeftaPlugin InitWithAppId: _appId];
     [_plugin SetContentRatingWithRating: NeftaPlugin.ContentRating_ParentalGuidance];
     
     __unsafe_unretained typeof(self) weakSelf = self;
-    _plugin.OnReady = ^(NSDictionary<NSString *, Placement *> * placements) {
+    _plugin.OnReady = ^(InitConfiguration *initConfig) {
         [weakSelf->_nuidLabel setText: [weakSelf->_plugin GetNuidWithPresent: false]];
         
-        for (NSString* placementId in placements) {
+        for (NSString* placementId in initConfig._placements) {
             PlacementUiView *controller = [[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
-            [controller Init: placements[placementId] viewController: weakSelf];
+            [controller Init: initConfig._placements[placementId] viewController: weakSelf];
 
             [weakSelf->_placementContainer addSubview: controller];
             [controllers addObject: controller];
@@ -54,13 +55,10 @@ static DebugServer *debugServer;
         [ViewController Reposition];
     };
     
-    [NeftaPlugin._instance GetInsights: Insights.Churn | Insights.Banner | Insights.Interstitial | Insights.Rewarded callback: ^(Insights * insights) {
+    [NeftaPlugin._instance GetInsights: Insights.Churn previousInsight: nil callback: ^(Insights * insights) {
         NSLog(@"On GetInsights");
         if (insights._churn != nil) {
-            NSLog(@"D1 churn %f", insights._churn._d1_probability);
-        }
-        if (insights._interstitial != nil) {
-            NSLog(@"Recommended interstitial %@: %f", insights._interstitial._adUnit, insights._interstitial._floorPrice);
+            NSLog(@"Churn D1: %f", insights._churn._d1_probability);
         }
     } timeout: 5];
     

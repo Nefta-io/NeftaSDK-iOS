@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0698C95123FBF676A990E6 /* Pods_DirectIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02554DA221CB88D51B692B8 /* Pods_DirectIntegration.framework */; };
 		909048F92CCD758F00DCDF56 /* InterstitialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F72CCD758F00DCDF56 /* InterstitialController.xib */; };
 		909048FA2CCD758F00DCDF56 /* BannerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F62CCD758F00DCDF56 /* BannerController.xib */; };
 		909048FB2CCD758F00DCDF56 /* RewardedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F82CCD758F00DCDF56 /* RewardedController.xib */; };
-		9091AECA2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */; };
-		9091AECB2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90B066212C6B7B2B00C65A24 /* DebugServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066202C6B7B2B00C65A24 /* DebugServer.swift */; };
 		90B9D5372CAC5D5E004F0561 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5362CAC5D59004F0561 /* BannerController.m */; };
 		90B9D53A2CAC5EB7004F0561 /* AdUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5392CAC5EB5004F0561 /* AdUnitController.m */; };
@@ -39,26 +38,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9091AECC2E40CA4D005AB6D8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9091AECB2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		909048F52CCD223C00DCDF56 /* IAdUnitCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdUnitCallback.h; sourceTree = "<group>"; };
 		909048F62CCD758F00DCDF56 /* BannerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerController.xib; sourceTree = "<group>"; };
 		909048F72CCD758F00DCDF56 /* InterstitialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterstitialController.xib; sourceTree = "<group>"; };
 		909048F82CCD758F00DCDF56 /* RewardedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedController.xib; sourceTree = "<group>"; };
-		9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeftaSDK.xcframework; sourceTree = "<group>"; };
 		90B066202C6B7B2B00C65A24 /* DebugServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugServer.swift; sourceTree = "<group>"; };
 		90B9D5352CAC5D2F004F0561 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
 		90B9D5362CAC5D59004F0561 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
@@ -86,6 +70,9 @@
 		90F45CA72AB1A5F2003A741F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F45CA82AB1A5F2003A741F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90FA456A2C7C4FCF00B43677 /* DirectIntegration-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DirectIntegration-Bridging-Header.h"; sourceTree = "<group>"; };
+		A4944C71D1594E6AB584E0B2 /* Pods-DirectIntegration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectIntegration.debug.xcconfig"; path = "Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration.debug.xcconfig"; sourceTree = "<group>"; };
+		D22058292B5C8D1E84156400 /* Pods-DirectIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectIntegration.release.xcconfig"; path = "Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration.release.xcconfig"; sourceTree = "<group>"; };
+		F02554DA221CB88D51B692B8 /* Pods_DirectIntegration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DirectIntegration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */,
-				9091AECA2E40CA4D005AB6D8 /* NeftaSDK.xcframework in Frameworks */,
+				8B0698C95123FBF676A990E6 /* Pods_DirectIntegration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +98,8 @@
 		90E92D1E2AB709E400B7E68C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9091AEC92E40CA4D005AB6D8 /* NeftaSDK.xcframework */,
 				90E92D1F2AB709E500B7E68C /* UIKit.framework */,
+				F02554DA221CB88D51B692B8 /* Pods_DirectIntegration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +110,7 @@
 				90F45C952AB1A5F2003A741F /* DirectIntegration */,
 				90F45C942AB1A5F2003A741F /* Products */,
 				90E92D1E2AB709E400B7E68C /* Frameworks */,
+				E2489312471AE305E835F992 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +158,15 @@
 			path = DirectIntegration;
 			sourceTree = "<group>";
 		};
+		E2489312471AE305E835F992 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4944C71D1594E6AB584E0B2 /* Pods-DirectIntegration.debug.xcconfig */,
+				D22058292B5C8D1E84156400 /* Pods-DirectIntegration.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,10 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90F45CAC2AB1A5F2003A741F /* Build configuration list for PBXNativeTarget "DirectIntegration" */;
 			buildPhases = (
+				DEA4F966CE7A6B4143DDCA1D /* [CP] Check Pods Manifest.lock */,
 				90F45C8F2AB1A5F2003A741F /* Sources */,
 				90F45C902AB1A5F2003A741F /* Frameworks */,
 				90F45C912AB1A5F2003A741F /* Resources */,
-				9091AECC2E40CA4D005AB6D8 /* Embed Frameworks */,
+				F0AD9ED3A3C47B0B77ECF407 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +269,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEA4F966CE7A6B4143DDCA1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DirectIntegration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AD9ED3A3C47B0B77ECF407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90BDBC7A2BE371CE0023A023 /* Sources */ = {
@@ -490,6 +530,7 @@
 		};
 		90F45CAD2AB1A5F2003A741F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4944C71D1594E6AB584E0B2 /* Pods-DirectIntegration.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -499,8 +540,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 214;
 				DEVELOPMENT_TEAM = 2LJ985962L;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = DirectIntegration/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "We need access to the local network to communicate with other devices.";
@@ -517,7 +562,12 @@
 					"@executable_path/Frameworks",
 					/usr/lib/swift,
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/lib/swift,
+				);
 				MARKETING_VERSION = 4.3.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nefta.direct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -539,6 +589,7 @@
 		};
 		90F45CAE2AB1A5F2003A741F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22058292B5C8D1E84156400 /* Pods-DirectIntegration.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -549,8 +600,12 @@
 				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = 2LJ985962L;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = DirectIntegration/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "We need access to the local network to communicate with other devices.";
@@ -567,7 +622,12 @@
 					"@executable_path/Frameworks",
 					/usr/lib/swift,
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/lib/swift,
+				);
 				MARKETING_VERSION = 4.3.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nefta.direct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

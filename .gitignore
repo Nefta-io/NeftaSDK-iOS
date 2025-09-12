@@ -3,3 +3,11 @@ xcuserdata/
 *.xcuserstate
 *.xcuserdatad
 *.xccheckout
+
+.DS_Store
+DerivedData/
+build/
+
+# CocoaPods
+Pods/
+Podfile.lock

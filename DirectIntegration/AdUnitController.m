@@ -66,7 +66,7 @@
 - (void)OnLoadWithAd:(NAd * _Nonnull)ad width:(NSInteger)width height:(NSInteger)height {
     [_statusLabel setText: @"OnLoad success"];
     
-    [NeftaPlugin OnExternalMediationRequest: @"internal-test" adType: _ad._type recommendedAdUnitId: [@"recomA" stringByAppendingString:_ad._bid._id] requestedFloorPrice: 0.2 calculatedFloorPrice: 0.3 adUnitId: @"seleA" revenue: 0.2 precision: @"prec" status: 1 providerStatus: nil networkStatus: nil];
+    [NeftaPlugin OnExternalMediationResponse: @"internal-test" id: @"seleA" id2: nil revenue: 0.2 precision: @"prec" status: 1 providerStatus: nil networkStatus: nil];
 }
 - (void)OnShowFailWithAd:(NAd * _Nonnull)ad error:(NError * _Nonnull)error {
     [_creativeIdLabel setText: @""];
@@ -75,7 +75,7 @@
 - (void)OnShowWithAd:(NAd * _Nonnull)ad {
     [_statusLabel setText: @"OnShow"];
     
-    [NeftaPlugin OnExternalMediationImpression: @"internal-test" data: [NSMutableDictionary dictionary] adType: ad._type revenue: 0.69 precision: @"pre"];
+    [NeftaPlugin OnExternalMediationImpression: false provider: @"internal-test" data: nil id: @"seleA" id2: nil];
 }
 - (void)OnCloseWithAd:(NAd * _Nonnull)ad {
     _ad = nil;
@@ -92,7 +92,7 @@
         ProgressionSource progressionSource = (ProgressionSource) arc4random_uniform(7);
         [NeftaPlugin._instance.Events AddProgressionEventWithStatus: progressionStatus type:progressionType source: progressionSource name: name value: randomValue];
     } else if (_ad._placement._type == TypesInterstitial) {
-        [NeftaPlugin._instance GetInsights: Insights.Interstitial callback: ^(Insights* insights) {
+        [NeftaPlugin._instance GetInsights: Insights.Interstitial previousInsight: nil callback: ^(Insights* insights) {
             if (insights._interstitial != nil) {
                 NSLog(@"Interstitial insight %f", insights._interstitial._floorPrice);
             }
@@ -102,7 +102,7 @@
         ReceiveMethod rMethod = (ReceiveMethod) arc4random_uniform(8);
         [NeftaPlugin._instance.Events AddReceiveEventWithCategory: rCategory method: rMethod name: name quantity: randomValue];
     } else {
-        [NeftaPlugin._instance GetInsights: Insights.Rewarded callback: ^(Insights* insights) {
+        [NeftaPlugin._instance GetInsights: Insights.Rewarded previousInsight: nil callback: ^(Insights* insights) {
             if (insights._rewarded != nil) {
                 NSLog(@"Rewarded insight %f", insights._rewarded._floorPrice);
             }
