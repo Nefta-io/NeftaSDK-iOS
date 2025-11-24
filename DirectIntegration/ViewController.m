@@ -19,14 +19,13 @@
 static UIView *BannerPlaceholder = nil;
 static NSMutableArray *controllers;
 static UIScrollView *placementsScroll;
-static DebugServer *debugServer;
 
 -(void)viewDidAppear:(BOOL)animated {
     if (controllers != nil) {
         return;
     }
     
-    debugServer = [[DebugServer alloc] initWithViewController: self];
+    [DebugServer InitWithViewController: self];
     
     BannerPlaceholder = _bannerPlaceholder;
     controllers = [[NSMutableArray alloc] init];
@@ -54,13 +53,6 @@ static DebugServer *debugServer;
         }
         [ViewController Reposition];
     };
-    
-    [NeftaPlugin._instance GetInsights: Insights.Churn previousInsight: nil callback: ^(Insights * insights) {
-        NSLog(@"On GetInsights");
-        if (insights._churn != nil) {
-            NSLog(@"Churn D1: %f", insights._churn._d1_probability);
-        }
-    } timeout: 5];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (@available(iOS 14.5, *)) {

@@ -4,6 +4,8 @@
 <dict>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This allows us to deliver personalized ads and content.</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>We need access to the local network to communicate with other devices.</string>
 	<key>LSApplicationQueriesSchemes</key>
