@@ -374,7 +374,7 @@ import UIKit
                         if segments.count > 12 {
                             networkStatus = segments[12]
                         }
-                        NeftaPlugin.OnExternalMediationResponse(provider, id: id1, id2: id2, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus)
+                        NeftaPlugin.OnExternalMediationResponse(provider, id: id1, id2: id2, revenue: revenue, precision: precision, status: status, providerStatus: providerStatus, networkStatus: networkStatus, baseObject: nil)
                         self.SendUdp(connection: connection, to: sourceName, message: "return|add_external_mediation_request")
                     }
                 case "add_external_mediation_impression":
