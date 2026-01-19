@@ -44,15 +44,16 @@ static UIScrollView *placementsScroll;
     _plugin.OnReady = ^(InitConfiguration *initConfig) {
         [weakSelf->_nuidLabel setText: [weakSelf->_plugin GetNuidWithPresent: false]];
         
-        for (NSString* placementId in initConfig._placements) {
-            PlacementUiView *controller = [[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
-            [controller Init: initConfig._placements[placementId] viewController: weakSelf];
-
-            [weakSelf->_placementContainer addSubview: controller];
-            [controllers addObject: controller];
-        }
         [ViewController Reposition];
     };
+    /*
+    for (NSString* adUnit in adUnits) {
+        PlacementUiView *controller = [[NSBundle mainBundle] loadNibNamed:@"PlacementUiView" owner:nil options:nil][0];
+        [controller Init: initConfig._placements[placementId] viewController: weakSelf];
+
+        [weakSelf->_placementContainer addSubview: controller];
+        [controllers addObject: controller];
+    }*/
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (@available(iOS 14.5, *)) {

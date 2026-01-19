@@ -66,7 +66,7 @@
 - (void)OnLoadWithAd:(NAd * _Nonnull)ad width:(NSInteger)width height:(NSInteger)height {
     [_statusLabel setText: @"OnLoad success"];
     
-    [NeftaPlugin OnExternalMediationResponse: @"internal-test" id: @"seleA" id2: nil revenue: 0.2 precision: @"prec" status: 1 providerStatus: nil networkStatus: nil];
+    [NeftaPlugin OnExternalMediationResponse: @"internal-test" id: @"seleA" id2: nil revenue: 0.2 precision: @"prec" status: 1 providerStatus: nil networkStatus: nil baseObject: nil];
 }
 - (void)OnShowFailWithAd:(NAd * _Nonnull)ad error:(NError * _Nonnull)error {
     [_creativeIdLabel setText: @""];

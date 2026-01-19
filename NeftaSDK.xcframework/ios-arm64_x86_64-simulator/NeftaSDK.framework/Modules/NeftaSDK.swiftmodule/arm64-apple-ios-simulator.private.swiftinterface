@@ -172,7 +172,7 @@ import os
   @objc public var OnReadyAsString: NeftaSDK.NeftaPlugin.OnReadyAsStringBlock?
   @objc public var OnInsightsAsString: NeftaSDK.NeftaPlugin.OnInsightsAsStringBlock?
   @objc public static var OnLog: NeftaSDK.NeftaPlugin.OnLogBlock?
-  @objc public static var _instance: NeftaSDK.NeftaPlugin!
+  @objc public static var _instance: NeftaSDK.NeftaPlugin?
   @objc(EnableLogging:) public static func EnableLogging(enable: Swift.Bool)
   @objc public static func Init(appId: Swift.String) -> NeftaSDK.NeftaPlugin
   @objc public static func Init(appId: Swift.String, integration: Swift.String) -> NeftaSDK.NeftaPlugin

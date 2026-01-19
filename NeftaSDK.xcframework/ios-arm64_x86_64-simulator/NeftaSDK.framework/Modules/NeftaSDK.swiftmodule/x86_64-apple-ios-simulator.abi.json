@@ -25148,7 +25148,7 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
+                "name": "Optional",
                 "printedName": "NeftaSDK.NeftaPlugin?",
                 "children": [
                   {
@@ -25182,7 +25182,7 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
+                    "name": "Optional",
                     "printedName": "NeftaSDK.NeftaPlugin?",
                     "children": [
                       {
@@ -25219,7 +25219,7 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
+                    "name": "Optional",
                     "printedName": "NeftaSDK.NeftaPlugin?",
                     "children": [
                       {
@@ -50450,7 +50450,7 @@
       "kind": "StringLiteral",
       "offset": 5743,
       "length": 7,
-      "value": "\"4.4.5\""
+      "value": "\"4.4.6\""
     },
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaSDK\/NeftaSDK\/NeftaPlugin.swift",
@@ -50630,7 +50630,7 @@
     {
       "filePath": "\/Users\/tomaztreven\/Projects\/nefta-plugins\/Apple\/NeftaSDK\/NeftaSDK\/NeftaPlugin.swift",
       "kind": "IntegerLiteral",
-      "offset": 24052,
+      "offset": 24055,
       "length": 1,
       "value": "0"
     },

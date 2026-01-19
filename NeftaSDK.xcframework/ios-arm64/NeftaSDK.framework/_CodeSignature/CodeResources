@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/NeftaSDK-Swift.h</key>
 		<data>
-		rPPaDYi20xHyPtNi3qe+/kGE6eU=
+		0mAAL6Ysahzj9GFzKaMRGeaIXYE=
 		</data>
 		<key>Headers/NeftaSDK.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		V1RH79Yac813jkX4d6otQu+xpZo=
+		gzxt+1VbwDrHvZFZF62iGF+5RGw=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		eqXYx88MLP+Zp3QVBM7twdiTgv8=
+		72anu80EakKJaN+Rqyk9BaPTxuw=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		eqXYx88MLP+Zp3QVBM7twdiTgv8=
+		72anu80EakKJaN+Rqyk9BaPTxuw=
 		</data>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		jHd+4euxMK7z22D2y3tr+KKpxyg=
+		6+RCdLbC/DeuqG2bB1URqFGoZ6g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kWuqgVjtG7FTXoyJie55ZXczT2C9xGygT9NcGnqUN+w=
+			GedwDS1vRoFdbwnLjVGME3wYSI+Ql0p45UvGUnv2IhU=
 			</data>
 		</dict>
 		<key>Headers/NeftaSDK.h</key>
@@ -80,14 +80,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pzaQueLFJTJD2l7Wk0Wb/3jfkX+NYZcZEi7e5YItgBk=
+			bESWHsG1XxWH9FXpSHn5cE00y+L8EqAnY0sGhkI5TO8=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			51RCYjqw0UqY5ML3nTpG/gseudNL0iyx/T3dDQKZCgE=
+			25VIqt1CR1sLURKCCuVdprzD/IFPaHWtbWnMXfBG1Zs=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -101,14 +101,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			51RCYjqw0UqY5ML3nTpG/gseudNL0iyx/T3dDQKZCgE=
+			25VIqt1CR1sLURKCCuVdprzD/IFPaHWtbWnMXfBG1Zs=
 			</data>
 		</dict>
 		<key>Modules/NeftaSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tAwP/Vet7t07VkXmr/fEGexk1B/8e6w9clnYooQLg9w=
+			LAyPxy97080JWwubjKsuWbxixqGU/NbMhyFEMqPUd9M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

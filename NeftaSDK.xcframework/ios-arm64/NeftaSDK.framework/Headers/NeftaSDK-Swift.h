@@ -761,9 +761,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable OnLog)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))OnLog SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnLog:(void (^ _Nullable)(NSString * _Nonnull))value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NeftaPlugin * _Null_unspecified _instance;)
-+ (NeftaPlugin * _Null_unspecified)_instance SWIFT_WARN_UNUSED_RESULT;
-+ (void)set_instance:(NeftaPlugin * _Null_unspecified)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) NeftaPlugin * _Nullable _instance;)
++ (NeftaPlugin * _Nullable)_instance SWIFT_WARN_UNUSED_RESULT;
++ (void)set_instance:(NeftaPlugin * _Nullable)value;
 + (void)EnableLogging:(BOOL)enable;
 + (NeftaPlugin * _Nonnull)InitWithAppId:(NSString * _Nonnull)appId SWIFT_WARN_UNUSED_RESULT;
 + (NeftaPlugin * _Nonnull)InitWithAppId:(NSString * _Nonnull)appId integration:(NSString * _Nonnull)integration SWIFT_WARN_UNUSED_RESULT;

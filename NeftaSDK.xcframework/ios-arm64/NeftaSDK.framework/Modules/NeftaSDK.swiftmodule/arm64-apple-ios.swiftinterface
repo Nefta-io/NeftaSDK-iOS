@@ -18,6 +18,38 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+@objc public class UnityWrapper : ObjectiveC.NSObject {
+  public typealias IOnReadyBlock = (Swift.String) -> Swift.Void
+  public typealias IOnBidBlock = (Swift.String, Swift.Float, Swift.Int) -> Swift.Void
+  public typealias IOnFailBlock = (Swift.String, Swift.Int, Swift.String?) -> Swift.Void
+  public typealias IOnLoadBlock = (Swift.String, Swift.Int, Swift.Int) -> Swift.Void
+  public typealias IOnChangeBlock = (Swift.String) -> Swift.Void
+  @objc public var IOnReady: NeftaSDK.UnityWrapper.IOnReadyBlock?
+  @objc public var IOnBid: NeftaSDK.UnityWrapper.IOnBidBlock?
+  @objc public var IOnLoadStart: NeftaSDK.UnityWrapper.IOnChangeBlock?
+  @objc public var IOnLoadFail: NeftaSDK.UnityWrapper.IOnFailBlock?
+  @objc public var IOnLoad: NeftaSDK.UnityWrapper.IOnLoadBlock?
+  @objc public var IOnShowFail: NeftaSDK.UnityWrapper.IOnFailBlock?
+  @objc public var IOnShow: NeftaSDK.UnityWrapper.IOnChangeBlock?
+  @objc public var IOnClick: NeftaSDK.UnityWrapper.IOnChangeBlock?
+  @objc public var IOnClose: NeftaSDK.UnityWrapper.IOnChangeBlock?
+  @objc public var IOnReward: NeftaSDK.UnityWrapper.IOnChangeBlock?
+  @objc final public let _plugin: NeftaSDK.NeftaPlugin
+  @objc public init(viewController: UIKit.UIViewController, appId: Swift.String)
+  @objc public func SetFloorPrice(id: Swift.String, floorPrice: Swift.Float)
+  @objc public func SetCustomParameter(id: Swift.String, provider: Swift.String, value: Swift.String)
+  @objc public func Mute(id: Swift.String, mute: Swift.Bool)
+  @objc public func CreateBanner(id: Swift.String, position: Swift.Int, autoRefresh: Swift.Bool)
+  @objc public func Bid(id: Swift.String)
+  @objc(GetPartialBidRequestAsString:) public func GetPartialBidRequestAsString(id: Swift.String) -> Swift.String?
+  @objc public func Load(id: Swift.String)
+  @objc public func LoadWithBidResponse(id: Swift.String, bidResponse: Foundation.Data)
+  @objc public func CanShow(id: Swift.String) -> Swift.Int
+  @objc public func Show(id: Swift.String)
+  @objc public func Hide(id: Swift.String)
+  @objc public func Close(id: Swift.String)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @objc public class NError : ObjectiveC.NSObject {
   @objc public enum Code : Swift.Int {
     case Unknown = 0
@@ -172,7 +204,7 @@ import os
   @objc public var OnReadyAsString: NeftaSDK.NeftaPlugin.OnReadyAsStringBlock?
   @objc public var OnInsightsAsString: NeftaSDK.NeftaPlugin.OnInsightsAsStringBlock?
   @objc public static var OnLog: NeftaSDK.NeftaPlugin.OnLogBlock?
-  @objc public static var _instance: NeftaSDK.NeftaPlugin!
+  @objc public static var _instance: NeftaSDK.NeftaPlugin?
   @objc(EnableLogging:) public static func EnableLogging(enable: Swift.Bool)
   @objc public static func Init(appId: Swift.String) -> NeftaSDK.NeftaPlugin
   @objc public static func Init(appId: Swift.String, integration: Swift.String) -> NeftaSDK.NeftaPlugin
@@ -371,38 +403,6 @@ import os
   @objc override public func Show(viewController: UIKit.UIViewController?)
   @objc override public func Close()
   @objc public func Hide()
-  @objc deinit
-}
-@objc public class UnityWrapper : ObjectiveC.NSObject {
-  public typealias IOnReadyBlock = (Swift.String) -> Swift.Void
-  public typealias IOnBidBlock = (Swift.String, Swift.Float, Swift.Int) -> Swift.Void
-  public typealias IOnFailBlock = (Swift.String, Swift.Int, Swift.String?) -> Swift.Void
-  public typealias IOnLoadBlock = (Swift.String, Swift.Int, Swift.Int) -> Swift.Void
-  public typealias IOnChangeBlock = (Swift.String) -> Swift.Void
-  @objc public var IOnReady: NeftaSDK.UnityWrapper.IOnReadyBlock?
-  @objc public var IOnBid: NeftaSDK.UnityWrapper.IOnBidBlock?
-  @objc public var IOnLoadStart: NeftaSDK.UnityWrapper.IOnChangeBlock?
-  @objc public var IOnLoadFail: NeftaSDK.UnityWrapper.IOnFailBlock?
-  @objc public var IOnLoad: NeftaSDK.UnityWrapper.IOnLoadBlock?
-  @objc public var IOnShowFail: NeftaSDK.UnityWrapper.IOnFailBlock?
-  @objc public var IOnShow: NeftaSDK.UnityWrapper.IOnChangeBlock?
-  @objc public var IOnClick: NeftaSDK.UnityWrapper.IOnChangeBlock?
-  @objc public var IOnClose: NeftaSDK.UnityWrapper.IOnChangeBlock?
-  @objc public var IOnReward: NeftaSDK.UnityWrapper.IOnChangeBlock?
-  @objc final public let _plugin: NeftaSDK.NeftaPlugin
-  @objc public init(viewController: UIKit.UIViewController, appId: Swift.String)
-  @objc public func SetFloorPrice(id: Swift.String, floorPrice: Swift.Float)
-  @objc public func SetCustomParameter(id: Swift.String, provider: Swift.String, value: Swift.String)
-  @objc public func Mute(id: Swift.String, mute: Swift.Bool)
-  @objc public func CreateBanner(id: Swift.String, position: Swift.Int, autoRefresh: Swift.Bool)
-  @objc public func Bid(id: Swift.String)
-  @objc(GetPartialBidRequestAsString:) public func GetPartialBidRequestAsString(id: Swift.String) -> Swift.String?
-  @objc public func Load(id: Swift.String)
-  @objc public func LoadWithBidResponse(id: Swift.String, bidResponse: Foundation.Data)
-  @objc public func CanShow(id: Swift.String) -> Swift.Int
-  @objc public func Show(id: Swift.String)
-  @objc public func Hide(id: Swift.String)
-  @objc public func Close(id: Swift.String)
   @objc deinit
 }
 @objc public class Churn : ObjectiveC.NSObject {
