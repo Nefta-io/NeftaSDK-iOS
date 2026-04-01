@@ -8,5 +8,5 @@ workspace 'DirectIntegration.xcworkspace'
 
 target 'DirectIntegration' do
   project 'DirectIntegration.xcodeproj'
-  pod 'NeftaSDK', :path => '.'
+  pod 'NeftaSDK'
 end
