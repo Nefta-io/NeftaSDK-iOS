@@ -8,17 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B0698C95123FBF676A990E6 /* Pods_DirectIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02554DA221CB88D51B692B8 /* Pods_DirectIntegration.framework */; };
-		909048F92CCD758F00DCDF56 /* InterstitialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F72CCD758F00DCDF56 /* InterstitialController.xib */; };
-		909048FA2CCD758F00DCDF56 /* BannerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F62CCD758F00DCDF56 /* BannerController.xib */; };
-		909048FB2CCD758F00DCDF56 /* RewardedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909048F82CCD758F00DCDF56 /* RewardedController.xib */; };
-		90B066212C6B7B2B00C65A24 /* DebugServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B066202C6B7B2B00C65A24 /* DebugServer.swift */; };
-		90B9D5372CAC5D5E004F0561 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5362CAC5D59004F0561 /* BannerController.m */; };
-		90B9D53A2CAC5EB7004F0561 /* AdUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D5392CAC5EB5004F0561 /* AdUnitController.m */; };
-		90B9D53D2CAC639A004F0561 /* RewardedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D53C2CAC6398004F0561 /* RewardedController.m */; };
-		90B9D5402CAC63A4004F0561 /* InterstitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B9D53F2CAC63A2004F0561 /* InterstitialController.m */; };
+		90E562C72F7F7D6200CC088F /* NDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E562C62F7F7D6200CC088F /* NDebug.swift */; };
 		90E92D202AB709E500B7E68C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92D1F2AB709E500B7E68C /* UIKit.framework */; };
-		90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E92D302AB894F500B7E68C /* PlacementUiView.m */; };
-		90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E92D352AB8B21500B7E68C /* PlacementUiView.xib */; };
 		90F45C982AB1A5F2003A741F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C972AB1A5F2003A741F /* AppDelegate.m */; };
 		90F45C9B2AB1A5F2003A741F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C9A2AB1A5F2003A741F /* SceneDelegate.m */; };
 		90F45C9E2AB1A5F2003A741F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F45C9D2AB1A5F2003A741F /* ViewController.m */; };
@@ -39,24 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		909048F52CCD223C00DCDF56 /* IAdUnitCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdUnitCallback.h; sourceTree = "<group>"; };
-		909048F62CCD758F00DCDF56 /* BannerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerController.xib; sourceTree = "<group>"; };
-		909048F72CCD758F00DCDF56 /* InterstitialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterstitialController.xib; sourceTree = "<group>"; };
-		909048F82CCD758F00DCDF56 /* RewardedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedController.xib; sourceTree = "<group>"; };
-		90B066202C6B7B2B00C65A24 /* DebugServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugServer.swift; sourceTree = "<group>"; };
-		90B9D5352CAC5D2F004F0561 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
-		90B9D5362CAC5D59004F0561 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
-		90B9D5382CAC5E99004F0561 /* AdUnitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdUnitController.h; sourceTree = "<group>"; };
-		90B9D5392CAC5EB5004F0561 /* AdUnitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdUnitController.m; sourceTree = "<group>"; };
-		90B9D53B2CAC6392004F0561 /* RewardedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedController.h; sourceTree = "<group>"; };
-		90B9D53C2CAC6398004F0561 /* RewardedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedController.m; sourceTree = "<group>"; };
-		90B9D53E2CAC639D004F0561 /* InterstitialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialController.h; sourceTree = "<group>"; };
-		90B9D53F2CAC63A2004F0561 /* InterstitialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialController.m; sourceTree = "<group>"; };
 		90BDBC7E2BE371CE0023A023 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E562C62F7F7D6200CC088F /* NDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDebug.swift; sourceTree = "<group>"; };
+		90E562C82F7F80FC00CC088F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		90E92D1F2AB709E500B7E68C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		90E92D302AB894F500B7E68C /* PlacementUiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementUiView.m; sourceTree = "<group>"; };
-		90E92D322AB8988100B7E68C /* PlacementUiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacementUiView.h; sourceTree = "<group>"; };
-		90E92D352AB8B21500B7E68C /* PlacementUiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacementUiView.xib; sourceTree = "<group>"; };
 		90F45C932AB1A5F2003A741F /* DirectIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F45C962AB1A5F2003A741F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90F45C972AB1A5F2003A741F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +84,7 @@
 		90F45C8A2AB1A5F2003A741F = {
 			isa = PBXGroup;
 			children = (
+				90E562C82F7F80FC00CC088F /* Package.swift */,
 				90F45C952AB1A5F2003A741F /* DirectIntegration */,
 				90F45C942AB1A5F2003A741F /* Products */,
 				90E92D1E2AB709E400B7E68C /* Frameworks */,
@@ -126,18 +104,7 @@
 		90F45C952AB1A5F2003A741F /* DirectIntegration */ = {
 			isa = PBXGroup;
 			children = (
-				909048F62CCD758F00DCDF56 /* BannerController.xib */,
-				909048F72CCD758F00DCDF56 /* InterstitialController.xib */,
-				909048F82CCD758F00DCDF56 /* RewardedController.xib */,
-				909048F52CCD223C00DCDF56 /* IAdUnitCallback.h */,
-				90B9D53F2CAC63A2004F0561 /* InterstitialController.m */,
-				90B9D53E2CAC639D004F0561 /* InterstitialController.h */,
-				90B9D53C2CAC6398004F0561 /* RewardedController.m */,
-				90B9D53B2CAC6392004F0561 /* RewardedController.h */,
-				90B9D5392CAC5EB5004F0561 /* AdUnitController.m */,
-				90B9D5382CAC5E99004F0561 /* AdUnitController.h */,
-				90B9D5362CAC5D59004F0561 /* BannerController.m */,
-				90B9D5352CAC5D2F004F0561 /* BannerController.h */,
+				90E562C62F7F7D6200CC088F /* NDebug.swift */,
 				90FA456A2C7C4FCF00B43677 /* DirectIntegration-Bridging-Header.h */,
 				90F45C962AB1A5F2003A741F /* AppDelegate.h */,
 				90F45C972AB1A5F2003A741F /* AppDelegate.m */,
@@ -145,15 +112,11 @@
 				90F45C9A2AB1A5F2003A741F /* SceneDelegate.m */,
 				90F45C9C2AB1A5F2003A741F /* ViewController.h */,
 				90F45C9D2AB1A5F2003A741F /* ViewController.m */,
-				90E92D322AB8988100B7E68C /* PlacementUiView.h */,
-				90E92D302AB894F500B7E68C /* PlacementUiView.m */,
 				90F45C9F2AB1A5F2003A741F /* Main.storyboard */,
 				90F45CA22AB1A5F2003A741F /* Assets.xcassets */,
 				90F45CA42AB1A5F2003A741F /* LaunchScreen.storyboard */,
 				90F45CA72AB1A5F2003A741F /* Info.plist */,
 				90F45CA82AB1A5F2003A741F /* main.m */,
-				90E92D352AB8B21500B7E68C /* PlacementUiView.xib */,
-				90B066202C6B7B2B00C65A24 /* DebugServer.swift */,
 			);
 			path = DirectIntegration;
 			sourceTree = "<group>";
@@ -259,11 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F45CA62AB1A5F2003A741F /* LaunchScreen.storyboard in Resources */,
-				909048F92CCD758F00DCDF56 /* InterstitialController.xib in Resources */,
-				909048FA2CCD758F00DCDF56 /* BannerController.xib in Resources */,
-				909048FB2CCD758F00DCDF56 /* RewardedController.xib in Resources */,
 				90F45CA32AB1A5F2003A741F /* Assets.xcassets in Resources */,
-				90E92D362AB8B21500B7E68C /* PlacementUiView.xib in Resources */,
 				90F45CA12AB1A5F2003A741F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,9 +260,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DirectIntegration/Pods-DirectIntegration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -325,15 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F45C9E2AB1A5F2003A741F /* ViewController.m in Sources */,
-				90B9D5402CAC63A4004F0561 /* InterstitialController.m in Sources */,
 				90F45C982AB1A5F2003A741F /* AppDelegate.m in Sources */,
-				90B066212C6B7B2B00C65A24 /* DebugServer.swift in Sources */,
-				90E92D312AB894F500B7E68C /* PlacementUiView.m in Sources */,
-				90B9D53A2CAC5EB7004F0561 /* AdUnitController.m in Sources */,
 				90F45CA92AB1A5F2003A741F /* main.m in Sources */,
-				90B9D53D2CAC639A004F0561 /* RewardedController.m in Sources */,
-				90B9D5372CAC5D5E004F0561 /* BannerController.m in Sources */,
 				90F45C9B2AB1A5F2003A741F /* SceneDelegate.m in Sources */,
+				90E562C72F7F7D6200CC088F /* NDebug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
