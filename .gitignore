@@ -11,3 +11,6 @@ build/
 # CocoaPods
 Pods/
 Podfile.lock
+
+.build/
+.swiftpm/xcode/
