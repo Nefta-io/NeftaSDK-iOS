@@ -20,7 +20,7 @@
     
     [NeftaPlugin EnableLogging: true];
     _plugin = [NeftaPlugin NativeInitWithAppId: _appId clientId: nil onReady: ^(InitConfiguration *initConfig) {
-        NSLog(@"NeftaPluginDI OnReady: skip optimization: %d", initConfig._skipOptimization);
+        NSLog(@"NeftaPluginDI Nefta initialized, nuid: %@", initConfig._nuid);
     } integration: @"direct" mediationVersion: @"/"];
 }
 
