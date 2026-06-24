@@ -16,8 +16,6 @@
     _appId = @"5742528628260864";
     [_appIdLabel setText: [NSString stringWithFormat: @"AppId: %@", _appId]];
     
-    [NeftaPlugin SetExtraParameterWithKey: NeftaPlugin.ExtParam_TestGroup value: @"split-direct"];
-    
     [NeftaPlugin EnableLogging: true];
     _plugin = [NeftaPlugin NativeInitWithAppId: _appId clientId: nil onReady: ^(InitConfiguration *initConfig) {
         NSLog(@"NeftaPluginDI Nefta initialized, nuid: %@", initConfig._nuid);
