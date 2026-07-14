@@ -196,7 +196,7 @@ public class AdViewController : UIViewController {
             }
         }
         
-        NeftaPlugin._instance = nil
+        /*NeftaPlugin._instance = nil
         NeftaPlugin.SetDebugTime(offset: 0)
         do {
             _store = try OSLogStore(scope: .currentProcessIdentifier)
@@ -210,7 +210,7 @@ public class AdViewController : UIViewController {
             print("DS:No wifi")
         } else {
             StartListening()
-        }
+        }*/
     }
     
     deinit {
