@@ -17,7 +17,7 @@
     [_appIdLabel setText: [NSString stringWithFormat: @"AppId: %@", _appId]];
     
     [NeftaPlugin EnableLogging: true];
-    _plugin = [NeftaPlugin NativeInitWithAppId: _appId clientId: nil onReady: ^(InitConfiguration *initConfig) {
+    _plugin = [NeftaPlugin NativeInitWithAppId: _appId clientId: nil optimizationType: OptimizationTypeOptimized onReady: ^(InitConfiguration *initConfig) {
         NSLog(@"NeftaPluginDI Nefta initialized, nuid: %@", initConfig._nuid);
     } integration: @"direct" mediationVersion: @"/"];
 }
